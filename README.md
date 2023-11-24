@@ -13,6 +13,7 @@ This website aims to provide Kit's customers with the option of creating an acco
 
 ### Target Audience  
 - 20 to 35 years of age
+- Student / Professional
 - Alternative / Artistic / LGBTQ+ / Climate Concious
 
 ### MVP specifications  
@@ -21,3 +22,11 @@ This website aims to provide Kit's customers with the option of creating an acco
 - Registered customers will be able to view appointments with full CRUD functionality
 - Bookings will need to be approved by Admin (Kit Wagstaff)
 
+
+
+
+# Future Features
+- Newsletter subscription
+- Testimonials
+- Online Merch Store
+- Full Online Booking Process - inc payment
