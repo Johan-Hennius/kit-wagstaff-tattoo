@@ -1,5 +1,5 @@
 # Kit Wagstaff Tattoo Website
-### Full-Stack capstone project - created during the Code Institute Full-Stack developer bootcamp.  
+### Full-Stack capstone project.  Created during the Code Institute Full-Stack developer bootcamp.  
 
 # Summary
 This project will serve as the MVP for Kit Wagstaff's new website and appointment booking system.  
