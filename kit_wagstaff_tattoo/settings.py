@@ -41,7 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #Apps
     'kwt_home',
+    'kwt_about',
+    'kwt_appointment',
+    'kwt_gallery',
+    'kwt_misc',
 ]
 
 MIDDLEWARE = [
