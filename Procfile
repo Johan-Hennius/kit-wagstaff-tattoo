@@ -1,0 +1,1 @@
+web: gunicorn kit_wagstaff_tattoo.wsgi
