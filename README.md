@@ -30,7 +30,10 @@ This website aims to provide Kit's customers with the option of creating an acco
 - set up booking page
 
 ## Issues
-- alignment of Login page
+- form order - need to adjust order of fields as they appear
+
+## Tests
+- Test form post request
 
 
 # Future Features
