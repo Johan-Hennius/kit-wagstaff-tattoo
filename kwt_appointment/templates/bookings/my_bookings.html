@@ -5,6 +5,28 @@
 
 {% block content %}
 
-    <h1>WE DID IT</h1>
+<h1>WE DID IT</h1>
+
+{% for booking in approved_bookings %}
+<div style="color: blue;">
+    <h2>
+        {{ booking.preferred_day }}
+        {{ booking.tattoo_description }}
+    </h2>
+    <a href="{% url 'update_booking' booking.id %}"><button
+            class="btn btn-outline-dark w-auto text-center">Edit</button></a>
+</div>
+{% endfor %}
+
+{% for booking in pending_bookings %}
+<div style="color: red;">
+    <h2>
+        {{ booking.preferred_day }}
+        {{ booking.tattoo_description }}
+    </h2>
+    <a href="{% url 'update_booking' booking.id %}"><button
+        class="btn btn-outline-dark w-auto text-center">Edit</button></a>
+</div>
+{% endfor %}
 
 {% endblock %}
