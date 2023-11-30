@@ -22,7 +22,15 @@ This website aims to provide Kit's customers with the option of creating an acco
 - Registered customers will be able to view appointments with full CRUD functionality
 - Bookings will need to be approved by Admin (Kit Wagstaff)
 
+# Day 1
+- Add fonts and set custom properties in css
+- set up templates, views, models
+- create booking form
 
+- set up booking page
+
+## Issues
+- alignment of Login page
 
 
 # Future Features

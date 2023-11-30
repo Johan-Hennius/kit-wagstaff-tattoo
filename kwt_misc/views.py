@@ -8,3 +8,7 @@ def tattoo_care(request):
 
 def terms(request):
     return HttpResponse("Terms & Conditions")
+
+
+def contact(request):
+    return HttpResponse("Contact")
