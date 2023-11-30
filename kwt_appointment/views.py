@@ -1,6 +1,5 @@
 from django.views.generic import CreateView, ListView, DetailView, DeleteView, UpdateView
 
-from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -51,3 +50,16 @@ class UpdateBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         return self.request.user == self.get_object().email_address
+
+
+class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """
+    Delete a booking
+    """
+    template_name = 'bookings/delete_booking.html'
+    model = Booking
+    success_url = '/booking/my-bookings/'
+    
+
+    def test_func(self):
+        return self.request.user == self.get_object().email_address       

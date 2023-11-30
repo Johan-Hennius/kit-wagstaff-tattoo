@@ -7,6 +7,7 @@
 
 <h1>WE DID IT</h1>
 
+
 {% for booking in approved_bookings %}
 <div style="color: blue;">
     <h2>
@@ -15,6 +16,8 @@
     </h2>
     <a href="{% url 'update_booking' booking.id %}"><button
             class="btn btn-outline-dark w-auto text-center">Edit</button></a>
+    <a href="{% url 'delete_booking' booking.id %}"><button
+            class="btn btn-outline-dark w-auto text-center">Delete</button></a>
 </div>
 {% endfor %}
 
@@ -25,7 +28,9 @@
         {{ booking.tattoo_description }}
     </h2>
     <a href="{% url 'update_booking' booking.id %}"><button
-        class="btn btn-outline-dark w-auto text-center">Edit</button></a>
+            class="btn btn-outline-dark w-auto text-center">Edit</button></a>
+    <a href="{% url 'delete_booking' booking.id %}"><button
+            class="btn btn-outline-dark w-auto text-center">Delete</button></a>
 </div>
 {% endfor %}
 
