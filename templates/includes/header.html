@@ -19,7 +19,7 @@
             <i class="fa-solid fa-bars navbar-toggler__icon"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" role="list">
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}"
                         href="{% url 'home' %}">Home</a>
@@ -51,7 +51,7 @@
                         href="{% url 'contact' %}">Contact</a>
                 </li>
             </ul>
-            <ul class="navbar-nav" id="navbarNav">
+            <ul class="navbar-nav" id="navbarNav" role="list">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link {% if url_name == 'accounts_logout' %}active" aria-current="page{% endif %}"

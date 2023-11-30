@@ -1,6 +1,9 @@
 from django import forms
+from django.contrib.auth.models import User
 from django.forms import ModelForm
 from .models import Booking
+
+
 
 from cloudinary.forms import CloudinaryFileField
 
@@ -25,8 +28,8 @@ class BookingForm(ModelForm):
             'preferred_time': 'Your preferred time',
             'cover_up': 'Is this a cover-up?',
             'color_or': 'Colour or black and grey',
-            'tattoo_location': '',
-            'tattoo_description': '',
+            'tattoo_location': 'Tattoo Location',
+            'tattoo_description': 'Tattoo Description',
             'reference_images': 'Reference images',
             'terms': 'I have read and agree to',
         }
@@ -39,7 +42,6 @@ class BookingForm(ModelForm):
             'color_or': forms.Select(attrs={'class': 'form-select',}),
             'tattoo_location': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Upper left arm'}),
             'tattoo_description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Style, size, inspiration...'}),
-            'reference_images': CloudinaryFileField(attrs={'class': 'form-control', 'placeholder': 'Style, size, inspiration...'}),
             'terms': forms.RadioSelect(attrs={'class': 'form-check-input'})
         }
 

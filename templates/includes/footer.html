@@ -1,0 +1,60 @@
+{% load static %}
+
+{% url 'about_kwt' as about_url %}
+{% url 'gallery' as gallery_url %}
+{% url 'booking_form' as booking_url %}
+{% url 'tattoo_care' as tattoo_care_url %}
+{% url 'terms' as terms_url %}
+
+<div class="container my-5">
+    <div class="row my-3 flex-md-row justify-content-md-center align-items-md-center">
+        <div class="col-3">
+            <ul role="list" class="flex-column justify-content-md-center align-items-md-center">
+                <li>
+                    <a class=""
+                        href="{% url 'about_kwt' %}" aria-label="Link to Kit Wagstaff tattoo about page">About</a>
+                </li>
+                <li>
+                    <a class=""
+                        href="{% url 'gallery' %}" aria-label="Link to Kit Wagstaff tattoo browse page">Browse</a>
+                </li>
+                <li>
+                    <a class=""
+                        href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}" aria-label="Link to Kit Wagstaff tattoo appointment booking page">Book</a>
+                </li>
+                <li>
+                    <a class=""
+                        href="{% url 'tattoo_care' %}" aria-label="Link to Kit Wagstaff tattoo care page">Care</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <ul role="list">
+                <li>
+                    <a class=""
+                        href="https://www.instagram.com/kitwagstafftattoo/" aria-label="Opens a link in new window to Kit Wagstaff Tattoo Instagram" target="_blank">Instagram</a>
+                </li>
+                <li>
+                    <a class=""
+                        href="https://www.facebook.com/kitwagstafftattoo" aria-label="Opens a link in new window to Kit Wagstaff Tattoo Facebook" target="_blank">Facebook</a>
+                </li>
+                <li>
+                    <a class=""
+                        href="https://twitter.com/kitwtattoo" aria-label="Opens a link in new window to Kit Wagstaff Tattoo Twitter" target="_blank">Twitter</a>
+                </li>                
+            </ul>
+        </div>
+        <div class="col-3" aria-label="Tattoo Studio address">
+            <p class="m-0">Inkabella Tattoo Studio,</p>
+            <p class="m-0">2 Broad Street Parade,</p>
+            <p class="m-0">Barry</p>
+            <p class="m-0">CF62 7AN</p>
+        </div>
+        <div class="col-3" aria-label="Tattoo Studio opening times and link to terms and conditions">
+            <p class="m-0">Wednesday - Saturday</p>
+            <p class="m-0">10am - 5pm</p>
+            <br/>
+            <a href="{% url 'terms' %}">Terms</a>
+        </div>
+    </div>
+</div>
