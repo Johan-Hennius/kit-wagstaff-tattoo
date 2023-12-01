@@ -12,9 +12,9 @@
 <div style="color: blue;">
     <h2>
         {{ booking.preferred_day }}
-        {{ booking.tattoo_description }}
+        {{ booking.tattoo_description | truncatechars:100 }}
     </h2>
-    <img src="{{ booking.reference_images }}" alt="">
+    <img src="{{ booking.reference_images.url }}" alt="">
 
     <a href="{% url 'update_booking' booking.id %}"><button
             class="btn btn-outline-dark w-auto text-center">Edit</button></a>
