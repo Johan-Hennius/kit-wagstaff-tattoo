@@ -104,20 +104,6 @@ def update_booking(request, booking_id):
     return render(request, template, context)
 
 
-
-# class UpdateBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-#     """
-#     Update a booking
-#     """
-#     template_name = 'bookings/update_booking.html'
-#     model = Booking
-#     form_class = BookingForm
-#     success_url = '/booking/my-bookings/'
-
-#     def test_func(self):
-#         return self.request.user == self.get_object().email_address
-
-
 class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     Delete a booking
