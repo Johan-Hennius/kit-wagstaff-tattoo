@@ -1,27 +1,58 @@
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib.auth.decorators import login_required
+
 from django.views.generic import CreateView, ListView, DetailView, DeleteView, UpdateView
 
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render, get_object_or_404, reverse
+
 from django.views import generic
 from django.contrib import messages
-from django.http import HttpResponse
 
 from .models import Booking
 from .forms import BookingForm
 
 
-class CreateBooking(LoginRequiredMixin, CreateView):
+# class CreateBooking(LoginRequiredMixin, CreateView):
     
-    template_name = 'bookings/booking.html'
-    model = Booking
-    success_url = '/booking/my-bookings/'
-    form_class = BookingForm
+#     template_name = 'bookings/booking.html'
+#     model = Booking
+#     success_url = '/booking/my-bookings/'
+#     form_class = BookingForm
 
-    def form_valid(self, form):
-        form.instance.email_address = self.request.user
-        return super(CreateBooking, self).form_valid(form)
+#     def form_valid(self, form):
+#         form.instance.email_address = self.request.user
+#         return super(CreateBooking, self).form_valid(form)
+
+
+@login_required
+def create_booking(request):
+
+    booking = BookingForm()
+
+    if request.method == 'POST':
+        form = BookingForm(data=request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.email_address = request.user
+            booking.save()
+            messages.add_message(
+                    request, messages.SUCCESS,
+                    "Booking created and awaiting approval"
+                )
+            return redirect('/booking/my-bookings/')
+    else:
+        form = BookingForm()
+
+    return render(
+        request,
+        'bookings/booking.html',
+        {
+            "form": form
+        }
+    )
+
 
 
 def my_bookings(request):
@@ -37,6 +68,9 @@ def my_bookings(request):
             'pending_bookings': pending_bookings,
         }
     )
+
+
+
 
 
 class UpdateBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):

@@ -31,9 +31,14 @@ This website aims to provide Kit's customers with the option of creating an acco
 
 ## Issues
 - form order - need to adjust order of fields as they appear
+- Success messages not appearing 
 
 ## Tests
 - Test form post request
+- user creation, login, logout
+
+# Day 2
+- Change class based views to function based views to allow for simpler integration of messages
 
 
 # Future Features
