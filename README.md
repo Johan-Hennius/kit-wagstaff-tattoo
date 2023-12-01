@@ -41,6 +41,11 @@ This website aims to provide Kit's customers with the option of creating an acco
 - Change class based views to function based views to allow for simpler integration of messages
 
 
+## Issues
+- image not showing in my bookings.html
+- update booking function not recognising user.email_address from query set
+-update booking function needing form to be declared outside of if statement
+
 # Future Features
 - Newsletter subscription
 - Testimonials
