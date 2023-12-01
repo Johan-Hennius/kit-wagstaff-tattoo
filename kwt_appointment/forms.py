@@ -6,6 +6,7 @@ from .models import Booking
 from cloudinary.forms import CloudinaryFileField
 
 class BookingForm(ModelForm):
+
     class Meta:
         model = Booking
         fields = {
@@ -30,6 +31,16 @@ class BookingForm(ModelForm):
             'terms': 'I have read and agree to',
         }
 
+        widgets = {
+        'email_address': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Your email address'}),
+        'preferred_day': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Your preferred day'}),
+        'preferred_time': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Your preferred time'}),
+        'cover_up': forms.Select(attrs={'class': 'form-select',}),
+        'color_or': forms.Select(attrs={'class': 'form-select',}),
+        'tattoo_location': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Upper left arm'}),
+        'tattoo_description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Style, size, inspiration...'}),
+    }
+
     field_order = [
         'preferred_day',
         'preferred_time',
@@ -41,14 +52,5 @@ class BookingForm(ModelForm):
         'terms',    
     ]
 
-        # widgets = {
-        #     'email_address': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Your email address'}),
-        #     'preferred_day': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Your preferred day'}),
-        #     'preferred_time': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Your preferred time'}),
-        #     'cover_up': forms.Select(attrs={'class': 'form-select',}),
-        #     'color_or': forms.Select(attrs={'class': 'form-select',}),
-        #     'tattoo_location': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Upper left arm'}),
-        #     'tattoo_description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Style, size, inspiration...'}),
-        #     'terms': forms.RadioSelect(attrs={'class': 'form-check-input'})
-        # }
+    
 
