@@ -28,7 +28,7 @@ class BookingForm(ModelForm):
             'tattoo_location': 'Tattoo Location',
             'tattoo_description': 'Tattoo Description',
             'reference_images': 'Reference images',
-            'terms': 'I have read and agree to',
+            'terms': 'I have read and agree to the',
         }
 
         widgets = {
