@@ -85,15 +85,16 @@ def update_booking(request, booking_id):
         messages.error(request, "Access Denied. This is not your booking.")
         return redirect(reverse("my_bookings"))
 
-    form = BookingForm(request.POST or None, request.FILES, instance=booking)
-
     # user owns the booking - okay to proceed
     if request.method == "POST":
+        form = BookingForm(request.POST or None, request.FILES, instance=booking)
         if form.is_valid():
             form.save()
             messages.success(request, "Booking updated and awaiting approval")
             return redirect(reverse("my_bookings"))
         messages.error(request, "An error occured, please try again!")
+    else:
+        form = BookingForm(instance=booking)
 
     template = "bookings/booking.html"
 
