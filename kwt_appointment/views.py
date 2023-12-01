@@ -4,26 +4,12 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView, ListView, DetailView, DeleteView, UpdateView
 
 from django.contrib.auth.models import User
-from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
-from django.contrib.auth.mixins import LoginRequiredMixin
 
 from django.views import generic
 from django.contrib import messages
 
 from .models import Booking
 from .forms import BookingForm
-
-
-# class CreateBooking(LoginRequiredMixin, CreateView):
-    
-#     template_name = 'bookings/booking.html'
-#     model = Booking
-#     success_url = '/booking/my-bookings/'
-#     form_class = BookingForm
-
-#     def form_valid(self, form):
-#         form.instance.email_address = self.request.user
-#         return super(CreateBooking, self).form_valid(form)
 
 
 @login_required
@@ -96,7 +82,7 @@ def update_booking(request, booking_id):
     else:
         form = BookingForm(instance=booking)
 
-    template = "bookings/booking.html"
+    template = "bookings/update_booking.html"
 
     context = {
         "form": form,
@@ -105,6 +91,7 @@ def update_booking(request, booking_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_booking(request, booking_id):
     """
     Functionality for a user to delete their own booking(s).
@@ -119,7 +106,7 @@ def delete_booking(request, booking_id):
         return redirect(reverse("my_bookings"))
 
     booking.delete()
-    return redirect('/booking/my-bookings/')
+    return redirect("my_bookings")
  
 
 
