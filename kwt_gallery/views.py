@@ -1,6 +1,18 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+from .models import Gallery
 
 # Create your views here.
 def gallery(request):
-    return HttpResponse("Gallery Page")
+    
+    images = Gallery.objects.all()
+    context = {
+        "images": images
+    }
+
+    return render(
+        request,
+        'gallery/gallery.html',
+        context,
+    )
+
