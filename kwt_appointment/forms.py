@@ -28,7 +28,7 @@ class BookingForm(ModelForm):
             'tattoo_location': 'Tattoo Location',
             'tattoo_description': 'Tattoo Description',
             'reference_images': 'Reference images',
-            'terms': 'I have read and agree to the',
+            'terms': '',
         }
 
         widgets = {
@@ -39,6 +39,7 @@ class BookingForm(ModelForm):
         'color_or': forms.Select(attrs={'class': 'form-select',}),
         'tattoo_location': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Upper left arm'}),
         'tattoo_description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Style, size, inspiration...'}),
+        'terms': forms.RadioSelect(attrs={'class': 'form-check-input'})
     }
 
     field_order = [
