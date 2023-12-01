@@ -11,10 +11,12 @@
             {% for booking in approved_bookings %}
             <img src="{{ booking.reference_image.url }}" alt="pewpew">
             <p>PEWPEWPEW</p>
-            <div style="color: blue;" class="w-25">
+            <div style="color: blue;">
                 <h2>
+                    {{ booking.confirmed_day}}
+                    {{ booking.confirmed_time }}
                     {{ booking.preferred_day }}
-                    {{ booking.tattoo_description|truncatechars:75 }}
+                    {{ booking.tattoo_description | truncatechars:75 }}
                 </h2>
                 <a href="{% url 'update_booking' booking.id %}"><button
                         class="btn btn-outline-dark w-auto text-center">Edit</button></a>
@@ -30,7 +32,7 @@
             <div style="color: red;">
                 <h2>
                     {{ booking.preferred_day }}
-                    {{ booking.tattoo_description }}
+                    {{ booking.tattoo_description | truncatechars:75 }}
                 </h2>
                 <a href="{% url 'update_booking' booking.id %}"><button
                         class="btn btn-outline-dark w-auto text-center">Edit</button></a>
@@ -42,27 +44,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="deleteModal{{ booking.id }}" tabindex="-1" aria-labelledby="delete booking modal"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="deleteModalLabel">Delet Booking?</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                Are you sure you want to delete your Booking?
-                This action cannot be undone.
-                If deleted within 72 hours of booking date, deposit will be lost.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger"><a
-                        href="{% url 'delete_booking' booking.id %}">Delete</a></button>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 
 {% endblock %}
