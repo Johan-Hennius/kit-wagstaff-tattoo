@@ -32,7 +32,7 @@ def create_booking(request):
     booking = BookingForm()
 
     if request.method == 'POST':
-        form = BookingForm(data=request.POST)
+        form = BookingForm(request.POST, request.FILES)
         if form.is_valid():
             booking = form.save(commit=False)
             booking.email_address = request.user
@@ -71,33 +71,51 @@ def my_bookings(request):
 
 
 
-def update_booking(Booking, booking_id):
+@login_required
+def update_booking(request, booking_id):
+    """
+    Functionality for a user to update their own booking(s).
+    """
 
+    # grab the existing booking
     booking = get_object_or_404(Booking, id=booking_id)
+    # check to see if the authenticated user owns this booking
+    if booking.email_address != request.user:
+        # not a match, take them back to their profile
+        messages.error(request, "Access Denied. This is not your booking.")
+        return redirect(reverse("my_bookings"))
 
-    if request.method == 'POST':
-        if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.post = post
-            comment.approved = False
-            comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
-        else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+    form = BookingForm(request.POST or None, request.FILES, instance=booking)
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    # user owns the booking - okay to proceed
+    if request.method == "POST":
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Booking updated and awaiting approval")
+            return redirect(reverse("my_bookings"))
+        messages.error(request, "An error occured, please try again!")
 
-class UpdateBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    """
-    Update a booking
-    """
-    template_name = 'bookings/update_booking.html'
-    model = Booking
-    form_class = BookingForm
-    success_url = '/booking/my-bookings/'
+    template = "bookings/booking.html"
 
-    def test_func(self):
-        return self.request.user == self.get_object().email_address
+    context = {
+        "form": form,
+    }
+
+    return render(request, template, context)
+
+
+
+# class UpdateBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+#     """
+#     Update a booking
+#     """
+#     template_name = 'bookings/update_booking.html'
+#     model = Booking
+#     form_class = BookingForm
+#     success_url = '/booking/my-bookings/'
+
+#     def test_func(self):
+#         return self.request.user == self.get_object().email_address
 
 
 class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -111,3 +129,5 @@ class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         return self.request.user == self.get_object().email_address       
+
+
