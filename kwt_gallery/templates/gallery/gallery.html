@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <h1>Gallery page</h1>
+        <div class="col-10 d-flex gap-3">
+            
+            {% for image in images %}
+            <img src="{{ image.gallery_image.url }}" alt="pewpew" style="width: 10rem;">
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
