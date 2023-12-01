@@ -21,6 +21,7 @@ def create_booking(request):
         form = BookingForm(request.POST, request.FILES)
         if form.is_valid():
             booking = form.save(commit=False)
+            booking.terms = True
             booking.email_address = request.user
             booking.save()
             messages.success(
@@ -75,6 +76,9 @@ def update_booking(request, booking_id):
     if request.method == "POST":
         form = BookingForm(request.POST or None, request.FILES, instance=booking)
         if form.is_valid():
+            booking = form.save(commit=False)
+            booking.confirmed = False
+            booking.terms = True
             form.save()
             messages.success(request, "Booking updated and awaiting approval")
             return redirect(reverse("my_bookings"))
