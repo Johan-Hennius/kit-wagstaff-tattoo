@@ -110,7 +110,7 @@ def delete_booking(request, booking_id):
         return redirect(reverse("my_bookings"))
 
     booking.delete()
-    return redirect("my_bookings")
+    return render("my_bookings")
  
 
 
