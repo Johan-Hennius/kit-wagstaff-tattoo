@@ -37,8 +37,8 @@ def create_booking(request):
             booking = form.save(commit=False)
             booking.email_address = request.user
             booking.save()
-            messages.add_message(
-                    request, messages.SUCCESS,
+            messages.success(
+                    request, 
                     "Booking created and awaiting approval"
                 )
             return redirect('/booking/my-bookings/')
@@ -71,7 +71,21 @@ def my_bookings(request):
 
 
 
+def update_booking(Booking, booking_id):
 
+    booking = get_object_or_404(Booking, id=booking_id)
+
+    if request.method == 'POST':
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 class UpdateBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
