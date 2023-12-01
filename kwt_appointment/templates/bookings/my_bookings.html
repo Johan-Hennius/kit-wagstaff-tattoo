@@ -14,6 +14,8 @@
         {{ booking.preferred_day }}
         {{ booking.tattoo_description }}
     </h2>
+    <img src="{{ booking.reference_images }}" alt="">
+
     <a href="{% url 'update_booking' booking.id %}"><button
             class="btn btn-outline-dark w-auto text-center">Edit</button></a>
     <a href="{% url 'delete_booking' booking.id %}"><button
