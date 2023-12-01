@@ -5,35 +5,41 @@
 
 {% block content %}
 
-<h1>WE DID IT</h1>
-
-
-{% for booking in approved_bookings %}
-<div style="color: blue;">
-    <h2>
-        {{ booking.preferred_day }}
-        {{ booking.tattoo_description | truncatechars:100 }}
-    </h2>
-    <img src="{{ booking.reference_images.url }}" alt="">
-
-    <a href="{% url 'update_booking' booking.id %}"><button
-            class="btn btn-outline-dark w-auto text-center">Edit</button></a>
-    <a href="{% url 'delete_booking' booking.id %}"><button
-            class="btn btn-outline-dark w-auto text-center">Delete</button></a>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            {% for booking in approved_bookings %}
+            <img src="{{ booking.reference_image.url }}" alt="pewpew">
+            <p>PEWPEWPEW</p>
+            <div style="color: blue;" class="w-25">
+                <h2>
+                    {{ booking.preferred_day }}
+                    {{ booking.tattoo_description|truncatechars:75 }}
+                </h2>
+                <a href="{% url 'update_booking' booking.id %}"><button
+                        class="btn btn-outline-dark w-auto text-center">Edit</button></a>
+                <a href="{% url 'delete_booking' booking.id %}"><button
+                        class="btn btn-outline-dark w-auto text-center">Delete</button></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            {% for booking in pending_bookings %}
+            <div style="color: red;">
+                <h2>
+                    {{ booking.preferred_day }}
+                    {{ booking.tattoo_description }}
+                </h2>
+                <a href="{% url 'update_booking' booking.id %}"><button
+                        class="btn btn-outline-dark w-auto text-center">Edit</button></a>
+                <a href="{% url 'delete_booking' booking.id %}"><button
+                        class="btn btn-outline-dark w-auto text-center">Delete</button></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
-{% endfor %}
-
-{% for booking in pending_bookings %}
-<div style="color: red;">
-    <h2>
-        {{ booking.preferred_day }}
-        {{ booking.tattoo_description }}
-    </h2>
-    <a href="{% url 'update_booking' booking.id %}"><button
-            class="btn btn-outline-dark w-auto text-center">Edit</button></a>
-    <a href="{% url 'delete_booking' booking.id %}"><button
-            class="btn btn-outline-dark w-auto text-center">Delete</button></a>
-</div>
-{% endfor %}
 
 {% endblock %}
