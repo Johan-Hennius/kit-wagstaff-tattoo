@@ -38,7 +38,7 @@ class Booking(models.Model):
     tattoo_location = models.CharField(max_length=75)
     tattoo_description = models.TextField()
     reference_images = CloudinaryField("image", default="placeholder", blank=True, null=True)
-    terms = models.BooleanField(default=False)
+    terms = models.BooleanField(default=True)
     confirmed = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
