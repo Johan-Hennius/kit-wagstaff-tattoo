@@ -105,16 +105,21 @@ def update_booking(request, booking_id):
     return render(request, template, context)
 
 
-class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+def delete_booking(request, booking_id):
     """
-    Delete a booking
+    Functionality for a user to delete their own booking(s).
     """
-    template_name = 'bookings/delete_booking.html'
-    model = Booking
-    success_url = '/booking/my-bookings/'
-    
 
-    def test_func(self):
-        return self.request.user == self.get_object().email_address       
+    booking = get_object_or_404(Booking, id=booking_id)
+
+    # user owns the booking - okay to proceed
+    if booking.email_address != request.user:
+        # not a match, take them back to their profile
+        messages.error(request, "Access Denied. This is not your booking.")
+        return redirect(reverse("my_bookings"))
+
+    booking.delete()
+    return redirect('/booking/my-bookings/')
+ 
 
 
