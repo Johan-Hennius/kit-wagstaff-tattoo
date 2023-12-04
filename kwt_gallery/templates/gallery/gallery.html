@@ -6,9 +6,18 @@
 
 <div class="container">
     <div class="row">
-        <h1>Gallery page</h1>
+        <div class="col-8">
+            <h1>Browse</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestias eligendi eaque consequuntur
+                soluta officia eius animi quas accusamus corrupti, nam veniam delectus sit numquam.</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static 'images/frog-mushroom-tattoo.png' %}" alt="Black and grey tattoo of a frog sitting on top of a boletus mushroom. Smaller mushrooms surround them.">
+        </div>
+
+
         <div class="col-10 d-flex gap-3">
-            
+
             {% for image in images %}
             <img src="{{ image.gallery_image.url }}" alt="pewpew" style="width: 10rem;">
             {% endfor %}
