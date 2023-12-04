@@ -5,44 +5,62 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container-fluid">
     <!--Hero section-->
-    <section class="row">
+    <section class="row hero-section pb-5 pt-2 justify-content-lg-around justify-content-center align-items-center">
         <!--Title and book button-->
-        <div class="col-7">
+        <div class="col-md-11 col-lg-5 d-lg-block d-flex flex-column justify-content-center align-items-center hero-section__titles">
             <div>
-                <h1>Kit</h1>
+                <h1 class="hero-section__first-title">Kit</h1>
             </div>
             <div>
-                <h2>Wagstaff</h2>
+                <h2 class="hero-section__second-title">Wagstaff</h2>
             </div>
-            <div>
-                <h3>Tattoo</h3>
-            </div>
-            <div>
-                <p>Book</p>
+            <div class="hero-section__third-title__wrapper d-lg-block d-flex align-items-center justify-content-center">
+                <h3 class="hero-section__third-title">Tattoo</h3>
             </div>
         </div>
-        <div class="col-5">
+        <div class="hero-section__book-button__holder d-flex justify-content-center d-lg-none my-3">
+            <div class="hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
+                <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
+                    class="hero-section__book-button">Book</a>
+            </div>
+        </div>
+        <div
+            class="col-11 col-lg-5 hero-section__main-image d-flex justify-content-center align-items-center justify-content-lg-end align-items-lg-end">
             <img src="{% static 'images/female-illustration.png' %}" class="img-fluid"
                 alt="Illustration of female with flowing auburn hair. Her head is frame by five golden stars. Chrysanthemum tattoo on her neck and a gold crescent moon by her collar bones.">
         </div>
-    </div>
+        <div class="hero-section__book-button__holder d-flex justify-content-center d-lg-flex d-none">
+            <div class="hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
+                <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
+                    class="hero-section__book-button">Book</a>
+            </div>
+        </div>
+    </section>
+
     <!--Small gallery-->
-    <section class="row justify-content-center align-items-center">
-        <div class="col-10 d-flex flex-wrap justify-content-between align-items-center">
-            <img src="{% static 'images/dino-tarot-tattoo.png' %}" class="img-fluid" alt="Colour tattoo of an earth tarot card containing a Roaring T-Rex with the caption 'when dinosaurs ruled'">
-            <img src="{% static 'images/kit-image-1.png' %}" alt="Photograph of the artist - Kit Wagstaff">
-            <img src="{% static 'images/boar-tattoo.png' %}" class="img-fluid" alt="Black and Grey tattoo of a boar surrounded by mushrooms, nettles, and flowers. A dagger with a celtic pattern sits in its head">
-            <img src="{% static 'images/t-rex-forearm-tattoo.png' %}" class="img-fluid" alt="Colour tatto of a T-Rex roaring with flowers underneath">
+    <section class="row justify-content-center align-items-center small-galery py-5">
+        <div class="col-11 d-flex flex-wrap justify-content-around align-items-center gap-1">
+            <img src="{% static 'images/dino-tarot-tattoo.png' %}" class="gallery__image"
+                alt="Colour tattoo of an earth tarot card containing a Roaring T-Rex with the caption 'when dinosaurs ruled'">
+            <img src="{% static 'images/kit-image-1.png' %}" class="gallery__image"
+                alt="Photograph of the artist - Kit Wagstaff">
+            <img src="{% static 'images/boar-tattoo.png' %}" class="gallery__image"
+                alt="Black and Grey tattoo of a boar surrounded by mushrooms, nettles, and flowers. A dagger with a celtic pattern sits in its head">
+            <img src="{% static 'images/t-rex-forearm-tattoo.png' %}" class="gallery__image"
+                alt="Colour tatto of a T-Rex roaring with flowers underneath">
         </div>
     </section>
-    <section class="row d-flex justify-content-center align-items-center">
-        <div class="col-10 d-flex justify-content-center align-items-center">
-            <a class="" href="{% url 'about_kwt' %}">About</a>
-            <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+    <section class="row d-flex justify-content-center align-items-center button__section">
+        <div class="col-10 d-flex justify-content-center align-items-center gap-5">
+            <a class="btn__rectangle" href="{% url 'about_kwt' %}">About</a>
+            <button class="btn__rectangle" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
         </div>
     </section>
+
 </div>
+
+
 
 {% endblock %}

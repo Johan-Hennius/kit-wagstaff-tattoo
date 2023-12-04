@@ -17,7 +17,8 @@
 
     /* Font sizes */
     --fs-title: clamp(5rem, 15vw, 16rem);
-    --fs-subtitle: clamp(2.25rem, 5vw, 5rem);
+    --fs-subtitle: clamp(3rem, 10vw, 14rem);
+    --fs-subtitle-2: clamp(2rem, 7vw, 5rem);
     --fs-text: 1.35rem;    
 }
 
@@ -118,10 +119,78 @@ textarea:not([rows]) {
     border: 0;
 }
 
-/*----------------------------------------------------------- GENERAL */
+/*--------------------------------------------------------------------------------- General */
+body,
+header {
+    background-color: var(--clr-l-grey);
+}
 
+footer {
+    background-color: var(--clr-black);
+    border-top: 3px solid var(--clr-gold);
+}
 
-/*----------------------------------------------------------- NAV */
+/*----------------------------------------------------------- Buttons */
+/*-------------------------------------- Book button */
+.hero-section__book-button__holder {
+    width: 100%;
+}
+
+.hero-section__book-button__wrapper {
+    background-image: url('../images/star-design.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: clamp(11rem, 20vw, 19rem);
+    aspect-ratio: 1;
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.hero-section__book-button {
+    padding: 1em;
+    font-family: var(--ff-secondary);
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    color: var(--clr-l-grey);
+    text-decoration: none;
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99),
+        color 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.hero-section__book-button__wrapper:hover, 
+.hero-section__book-button__wrapper:hover .hero-section__book-button {
+    scale: 1.1;
+}
+
+.hero-section__book-button:hover {
+    color: var(--clr-black);
+}
+
+/*-------------------------------------- Rectangular button */
+.btn__rectangle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-l-grey);
+    background-color: var(--clr-gold);
+    font-family: var(--ff-secondary);
+    font-size: clamp(1.2rem, 1.75vw, 1.75rem);
+    height: 5rem;
+    width: 15rem;
+    border: none;
+    text-decoration: none;
+    margin: 1rem 2rem;
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99),
+        color 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.btn__rectangle:hover {
+    scale: 1.1;
+    color: var(--clr-black);
+}
+
+/*----------------------------------------------------------- Nav */
 .navbar-toggler,
 .navbar-toggler:active,
 .navbar-toggler:focus {
@@ -131,4 +200,80 @@ textarea:not([rows]) {
 
 .navbar-toggler__icon {
     color: var(--clr-black);
+}
+
+
+/*--------------------------------------------------------------------------------- Index */
+/*----------------------------------------------------------- Hero */
+.hero-section {
+    background-image: linear-gradient(180deg, var(--clr-l-grey) 82%, var(--clr-black) 82%);
+}
+
+.hero-section__titles {
+    
+}
+
+.hero-section__first-title {
+    font-family: var(--ff-text);
+    font-size: var(--fs-subtitle);
+    color: var(--clr-gold);
+    padding-left: 33%;
+    margin-bottom: -7%;
+}
+
+.hero-section__second-title {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-title);
+    color: var(--clr-black);
+}
+
+.hero-section__third-title__wrapper {
+    width: 100%;
+}
+
+.hero-section__third-title {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-subtitle-2);
+    color: var(--clr-red);
+    padding-left: 66%;
+    margin-top: -3%;
+}
+
+.hero-section__main-image {
+    
+}
+
+/*----------------------------------------------------------- Small Gallery */
+.small-galery {
+    background-color: var(--clr-black);
+}
+
+.gallery__image {
+    max-width: 394px;
+    max-height: 629px;
+    margin: 2rem 0;
+}
+
+
+.button__section {
+    height: 20vh;
+    border-top: 3px solid var(--clr-gold);
+    background-color: var(--clr-black);
+}
+
+/*--------------------------------------------------------------------------------- Media Queries */
+@media (max-width: 992px) {
+    .hero-section {
+        background-image: linear-gradient(180deg, var(--clr-l-grey) 70%, var(--clr-black) 70%);
+    }
+    
+    .hero-section__first-title {
+        padding-left: 0;
+        margin-bottom: -35%;
+    }
+
+    .hero-section__third-title {
+        padding-left: 0;
+        margin-top: -2%;
+    }
 }
