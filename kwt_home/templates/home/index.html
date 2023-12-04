@@ -6,11 +6,43 @@
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-10">
-            <h1>HOME PAGE</h1>
+    <!--Hero section-->
+    <section class="row">
+        <!--Title and book button-->
+        <div class="col-8">
+            <div>
+                <h1>Kit</h1>
+            </div>
+            <div>
+                <h2>Wagstaff</h2>
+            </div>
+            <div>
+                <h3>Tattoo</h3>
+            </div>
+            <div>
+                <p>Book</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <img src="{% static 'images/female-illustration.png' %}" class="img-fluid"
+                alt="Illustration of female with flowing auburn hair. Her head is frame by five golden stars. Chrysanthemum tattoo on her neck and a gold crescent moon by her collar bones.">
         </div>
     </div>
+    <!--Small gallery-->
+    <section class="row justify-content-center align-items-center">
+        <div class="col-10 d-flex flex-wrap justify-content-between align-items-center">
+            <img src="{% static 'images/dino-tarot-tattoo.png' %}" class="img-fluid" alt="Colour tattoo of an earth tarot card containing a Roaring T-Rex with the caption 'when dinosaurs ruled'">
+            <img src="{% static 'images/kit-image-1.png' %}" alt="Photograph of the artist - Kit Wagstaff">
+            <img src="{% static 'images/boar-tattoo.png' %}" class="img-fluid" alt="Black and Grey tattoo of a boar surrounded by mushrooms, nettles, and flowers. A dagger with a celtic pattern sits in its head">
+            <img src="{% static 'images/t-rex-forearm-tattoo.png' %}" class="img-fluid" alt="Colour tatto of a T-Rex roaring with flowers underneath">
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-10">
+            <a class="" href="{% url 'about_kwt' %}">About</a>
+            <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+        </div>
+    </section>
 </div>
 
 {% endblock %}
