@@ -6,7 +6,7 @@
 {% url 'booking_form' as booking_url %}
 {% url 'my_bookings' as my_bookings_url %}
 {% url 'tattoo_care' as tattoo_care_url %}
-{% url 'contact' as contact_url %}
+{% url 'contact_modal' as contact_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -47,8 +47,7 @@
                         href="{% url 'tattoo_care' %}">Tattoo Care</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == contact_url %}active" aria-current="page{% endif %}"
-                        href="{% url 'contact' %}">Contact</a>
+                    <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
                 </li>
             </ul>
             <ul class="navbar-nav" id="navbarNav" role="list">
