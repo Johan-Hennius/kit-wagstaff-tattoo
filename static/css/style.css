@@ -18,9 +18,7 @@
     /* Font sizes */
     --fs-title: clamp(5rem, 15vw, 16rem);
     --fs-subtitle: clamp(2.25rem, 5vw, 5rem);
-    --fs-text: 1.35rem;
-
-    
+    --fs-text: 1.35rem;    
 }
 
 /* Reset */
