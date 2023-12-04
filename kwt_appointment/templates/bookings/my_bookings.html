@@ -21,8 +21,28 @@
                 <a href="{% url 'update_booking' booking.id %}"><button
                         class="btn btn-outline-dark w-auto text-center">Edit</button></a>
                 <button class="btn btn-outline-dark w-auto text-center" data-bs-toggle="modal"
-                    data-bs-target="#deleteModal">Delete</button>
+                    data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
             </div>
+
+            <div class="modal fade" id="deleteModal-{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel">Delete booking?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete your booking?
+                            This action cannot be undone.
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{% url 'delete_booking' booking.id %}" class="btn btn-danger">Delete</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {% endfor %}
         </div>
     </div>
@@ -40,6 +60,26 @@
                 <button class="btn btn-outline-dark w-auto text-center" data-bs-toggle="modal"
                     data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
             </div>
+
+            <div class="modal fade" id="deleteModal-{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel">Delete booking?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete your booking?
+                            This action cannot be undone.
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{% url 'delete_booking' booking.id %}" class="btn btn-danger">Delete</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {% endfor %}
         </div>
     </div>
