@@ -191,6 +191,12 @@ footer {
 }
 
 /*----------------------------------------------------------- Nav */
+.navbar {
+    background-color: var(--clr-l-grey)!important;
+    padding: 1.5rem 2rem;
+    border-bottom: 3px solid var(--clr-gold);
+}
+
 .navbar-toggler,
 .navbar-toggler:active,
 .navbar-toggler:focus {
@@ -202,6 +208,39 @@ footer {
     color: var(--clr-black);
 }
 
+.nav-item a,
+.navbar-brand,
+.nav-item button {
+    color: var(--clr-black);
+    font-family: var(--ff-secondary);
+    font-size: 0.9rem;
+    transition: 
+        color 500ms cubic-bezier(.37, 0, .45, .99),
+        letter-spacing 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.nav-item a:hover,
+.navbar-brand:hover,
+.nav-item button:hover {
+    color: var(--clr-gold);
+    letter-spacing: 0.1rem;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.nav-item button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item .nav__logout {
+    color: var(--clr-red);
+}
 
 /*--------------------------------------------------------------------------------- Index */
 /*----------------------------------------------------------- Hero */
