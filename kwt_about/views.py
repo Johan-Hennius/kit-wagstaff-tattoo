@@ -3,4 +3,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 def about_kwt(request):
-    return HttpResponse("About Page")
+    return render(
+        request,
+        "about/about.html",
+        {
+            
+        }
+    )

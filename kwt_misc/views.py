@@ -3,12 +3,23 @@ from django.http import HttpResponse
 
 # Create your views here.
 def tattoo_care(request):
-    return HttpResponse("Tattoo Care Page")
+    return render(
+        request,
+        "misc/tattoo_care.html",
+        {
+
+        }
+    )
 
 
 def terms(request):
-    return HttpResponse("Terms & Conditions")
+    return render(
+        request,
+        "misc/terms.html",
+        {
+            
+        }
+    )
 
 
-def contact(request):
-    return HttpResponse("Contact")
+
