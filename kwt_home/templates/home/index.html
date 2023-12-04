@@ -8,7 +8,7 @@
 <div class="container-fluid">
     <!--Hero section-->
     <section class="row hero-section pb-5 pt-2 justify-content-lg-around justify-content-center align-items-center">
-        <!--Title and book button-->
+        <!--Titles-->
         <div class="col-md-11 col-lg-5 d-lg-block d-flex flex-column justify-content-center align-items-center hero-section__titles">
             <div>
                 <h1 class="hero-section__first-title">Kit</h1>
@@ -20,17 +20,20 @@
                 <h3 class="hero-section__third-title">Tattoo</h3>
             </div>
         </div>
+        <!--Medium screen book button-->
         <div class="hero-section__book-button__holder d-flex justify-content-center d-lg-none my-3">
             <div class="hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
                 <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
                     class="hero-section__book-button">Book</a>
             </div>
         </div>
+        <!--Hero section illustration-->
         <div
             class="col-11 col-lg-5 hero-section__main-image d-flex justify-content-center align-items-center justify-content-lg-end align-items-lg-end">
             <img src="{% static 'images/female-illustration.png' %}" class="img-fluid"
                 alt="Illustration of female with flowing auburn hair. Her head is frame by five golden stars. Chrysanthemum tattoo on her neck and a gold crescent moon by her collar bones.">
         </div>
+        <!--Large screen book button-->
         <div class="hero-section__book-button__holder d-flex justify-content-center d-lg-flex d-none">
             <div class="hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
                 <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
@@ -52,6 +55,8 @@
                 alt="Colour tatto of a T-Rex roaring with flowers underneath">
         </div>
     </section>
+
+    <!--About and contact buttons-->
     <section class="row d-flex justify-content-center align-items-center button__section">
         <div class="col-10 d-flex justify-content-center align-items-center gap-5">
             <a class="btn__rectangle" href="{% url 'about_kwt' %}">About</a>
