@@ -4,25 +4,25 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 COVER_UP_CHOICES = (
-    ("Yes", "yes"),
-    ("No", "No")
+    ("yes", "Yes"),
+    ("no", "No")
 )
 
 DAYS = (
-    ("Wednesday", "wednesday"),
-    ("Thursday", "thursday"),
-    ("Friday", "friday"),
-    ("Saturday", "saturday")
+    ("wednesday", "Wednesday"),
+    ("thursday", "Thursday"),
+    ("friday", "Friday"),
+    ("saturday", "Saturday")
 )
 
 TIME = (
-    ("Morning", "morning"),
-    ("Afternoon", "afternoon")
+    ("morning", "Morning"),
+    ("afternoon", "Afternoon")
 )
 
 COLOR_OR = (
-    ("Colour", "colour"),
-    ("Black and Grey", "black and grey")
+    ("colour", "Colour"),
+    ("black and grey", "Black and Grey")
 )
 
 # Create your models here.
