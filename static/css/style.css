@@ -130,6 +130,10 @@ footer {
     border-top: 3px solid var(--clr-gold);
 }
 
+ul {
+    padding-left: 0;
+}
+
 /*----------------------------------------------------------- Buttons */
 /*-------------------------------------- Book button */
 .hero-section__book-button__holder {
@@ -242,6 +246,20 @@ footer {
     color: var(--clr-red);
 }
 
+/*----------------------------------------------------------- Footer */
+.footer__wrapper {
+
+}
+
+.footer__list a,
+.footer__info p,
+.footer__info a {
+    color: var(--clr-l-grey);
+    text-decoration: none;
+    font-family: var(--ff-secondary);
+    font-size: 0.8rem;
+}
+
 /*--------------------------------------------------------------------------------- Index */
 /*----------------------------------------------------------- Hero */
 .hero-section {
@@ -298,9 +316,9 @@ footer {
     scale: 0.9;
 }
 
-
+/*----------------------------------------------------------- Button section */
 .button__section {
-    height: 20vh;
+    min-height: 20vh;
     border-top: 3px solid var(--clr-gold);
     background-color: var(--clr-black);
 }
