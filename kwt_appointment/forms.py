@@ -1,11 +1,10 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.forms import ModelForm
 from .models import Booking
 
 from cloudinary.forms import CloudinaryFileField
 
-class BookingForm(ModelForm):
+class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
@@ -32,7 +31,6 @@ class BookingForm(ModelForm):
         }
 
         widgets = {
-        'email_address': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Your email address'}),
         'preferred_day': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Your preferred day'}),
         'preferred_time': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Your preferred time'}),
         'cover_up': forms.Select(attrs={'class': 'form-select',}),
