@@ -4,5 +4,60 @@
 {% block title %}About{% endblock %}
 
 {% block content %}
-
+<div class="container">
+    <!--Hero section-->
+    <section class="row">
+        <!--Title and book button-->
+        <div class="col-8">
+            <div>
+                <h1>About</h1>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi reprehenderit quia placeat
+                    officiis voluptas dicta animi soluta distinctio eos esse non error, molestiae incidunt illo sit?
+                    Corporis facere nulla tempore fugit minima incidunt et a quis, odio cupiditate commodi ullam autem,
+                    tempora soluta exercitationem accusantium illum cum? Laborum error ipsa, suscipit laboriosam
+                    voluptate, earum reprehenderit minus explicabo veritatis est corrupti voluptatibus odio quibusdam
+                    odit quos sequi laudantium voluptatem delectus! Omnis adipisci quisquam accusamus exercitationem
+                    recusandae illo! Aut quod magnam impedit fuga reiciendis deserunt, numquam cum in at? Recusandae,
+                    debitis neque cupiditate hic quisquam perferendis sequi ducimus minima omnis sapiente repellat
+                    veritatis non maiores, culpa facilis beatae quidem rem, temporibus error enim soluta. Amet cumque
+                    distinctio labore iure repudiandae, facilis ullam facere saepe eveniet, numquam quasi possimus.
+                    Voluptas eos rem tempora tempore delectus rerum exercitationem, distinctio inventore iusto, neque
+                    facere alias eius vero, quae dolore maxime. In ut libero iusto.</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <img src="{% static 'images/kit-about-image.png' %}" class="img-fluid"
+                alt="Photograph of the artist - Kit Wagstaff Tattoo">
+        </div>
+</div>
+<!--Small gallery-->
+<section class="row justify-content-center align-items-center">
+    <div class="col-5 d-flex justify-content-between align-items-center">
+        <img src="{% static 'images/dino-tarot-tattoo.png' %}" class="img-fluid"
+            alt="Colour tattoo of an earth tarot card containing a Roaring T-Rex with the caption 'when dinosaurs ruled'">
+        <img src="{% static 'images/bodies-are-weird.png' %}" alt="Photograph of the artist - Kit Wagstaff">
+    </div>
+    <div class="col-5">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi reprehenderit quia placeat
+            officiis voluptas dicta animi soluta distinctio eos esse non error, molestiae incidunt illo sit?
+            Corporis facere nulla tempore fugit minima incidunt et a quis, odio cupiditate commodi ullam autem,
+            tempora soluta exercitationem accusantium illum cum? Laborum error ipsa, suscipit laboriosam
+            voluptate, earum reprehenderit minus explicabo veritatis est corrupti voluptatibus odio quibusdam
+            odit quos sequi laudantium voluptatem delectus! Omnis adipisci quisquam accusamus exercitationem
+            recusandae illo! Aut quod magnam impedit fuga reiciendis deserunt, numquam cum in at? Recusandae,
+            debitis neque cupiditate hic quisquam perferendis sequi ducimus minima omnis sapiente repellat
+            veritatis non maiores, culpa facilis beatae quidem rem, temporibus error enim soluta. Amet cumque
+            distinctio labore iure repudiandae, facilis ullam facere saepe eveniet, numquam quasi possimus.
+            Voluptas eos rem tempora tempore delectus rerum exercitationem, distinctio inventore iusto, neque
+            facere alias eius vero, quae dolore maxime. In ut libero iusto.</p>
+    </div>
+</section>
+<section class="row justify-content-center align-items-center">
+    <div class="col-10 d-flex justify-content-center align-items-center">
+        <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+    </div>
+</section>
+</div>
 {% endblock %}
