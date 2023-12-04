@@ -210,7 +210,7 @@ footer {
 }
 
 .hero-section__titles {
-    
+
 }
 
 .hero-section__first-title {
@@ -244,14 +244,19 @@ footer {
 }
 
 /*----------------------------------------------------------- Small Gallery */
-.small-galery {
+.small-gallery {
     background-color: var(--clr-black);
+    padding-top: 3rem;
+    padding-bottom: 10rem;
 }
 
 .gallery__image {
     max-width: 394px;
     max-height: 629px;
     margin: 2rem 0;
+    border-radius: 50% 50% 0 0;
+    gap: 3rem;
+    scale: 0.9;
 }
 
 
@@ -262,7 +267,15 @@ footer {
 }
 
 /*--------------------------------------------------------------------------------- Media Queries */
+@media (max-width: 1200px) {
+    
+    /*----------------------------------------------------------- Small Gallery */
+    
+}
+
 @media (max-width: 992px) {
+
+    /*----------------------------------------------------------- Hero Section */
     .hero-section {
         background-image: linear-gradient(180deg, var(--clr-l-grey) 70%, var(--clr-black) 70%);
     }
@@ -276,4 +289,7 @@ footer {
         padding-left: 0;
         margin-top: -2%;
     }
+
+    /*----------------------------------------------------------- Small Gallery */
+    
 }
