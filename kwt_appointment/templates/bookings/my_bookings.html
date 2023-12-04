@@ -18,8 +18,7 @@
                     {{ booking.preferred_day }}
                     {{ booking.tattoo_description | truncatechars:75 }}
                 </h2>
-                <a href="{% url 'update_booking' booking.id %}"><button
-                        class="btn btn-outline-dark w-auto text-center">Edit</button></a>
+                <a href="{% url 'update_booking' booking.id %}" class="btn btn-outline-dark w-auto text-center">Edit</a>
                 <button class="btn btn-outline-dark w-auto text-center" data-bs-toggle="modal"
                     data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
             </div>
@@ -55,8 +54,7 @@
                     {{ booking.preferred_day }}
                     {{ booking.tattoo_description | truncatechars:75 }}
                 </h2>
-                <a href="{% url 'update_booking' booking.id %}"><button
-                        class="btn btn-outline-dark w-auto text-center">Edit</button></a>
+                <a href="{% url 'update_booking' booking.id %}" class="btn btn-outline-dark w-auto text-center">Edit</a>
                 <button class="btn btn-outline-dark w-auto text-center" data-bs-toggle="modal"
                     data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
             </div>
