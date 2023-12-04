@@ -110,7 +110,8 @@ def delete_booking(request, booking_id):
         return redirect(reverse("my_bookings"))
 
     booking.delete()
-    return render("my_bookings")
+    messages.success(request, "Booking deleted")
+    return redirect("my_bookings")
  
 
 
