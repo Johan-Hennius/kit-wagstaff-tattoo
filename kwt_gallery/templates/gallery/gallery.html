@@ -25,12 +25,15 @@
             <img src="{% static 'images/frog-mushroom-tattoo.png' %}" class="img-fluid hero-section__main-image"
                 alt="Black and grey tattoo of a frog sitting on top of a boletus mushroom. Smaller mushrooms surround them.">
         </div>
-
-
-        <div class="col-10 d-flex gap-3">
-
+    </div>
+    <!--Portfolio images-->
+    <section class="row justify-content-center align-items-center small-gallery">
+        <div class="col-11 d-flex flex-wrap justify-content-around align-items-center gap-2 w-100">
             {% for image in images %}
-            <img src="{{ image.gallery_image.url }}" alt="pewpew" style="width: 10rem;">
+            <div class="image__wrapper" data-src="{{ image.gallery_image.url }}" data-fancybox="gallery"
+                data-caption="{{ image.caption }}">
+                <img src="{{ image.gallery_image.url }}" class="gallery__image img-fluid" alt="{{ image.caption }}">
+            </div>
             {% endfor %}
         </div>
     </section>
