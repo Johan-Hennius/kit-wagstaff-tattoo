@@ -4,15 +4,26 @@
 {% block content %}
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-8">
-            <h1>Browse</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestias eligendi eaque consequuntur
-                soluta officia eius animi quas accusamus corrupti, nam veniam delectus sit numquam.</p>
+<div class="container-fluid">
+    <div class="row hero-section pb-5 pt-2 justify-content-lg-around justify-content-center align-items-center">
+        <div
+            class="col-md-11 col-lg-5 d-lg-block d-flex flex-column justify-content-center align-items-center hero-section__titles">
+            <div>
+                <h1 class="hero-section__second-title">Browse</h1>
+            </div>
+            <div class="hero-section--about__summary d-none d-xl-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi reprehenderit quia placeat
+                    officiis voluptas dicta animi soluta distinctio eos esse non error, molestiae incidunt illo sit?
+                    Corporis facere nulla tempore fugit minima incidunt et a quis, odio cupiditate commodi ullam autem,
+                    tempora soluta exercitationem accusantium illum cum? Laborum error ipsa, suscipit laboriosam
+                    voluptate, earum reprehenderit minus explicabo veritatis est corrupti voluptatibus odio quibusdam
+                    odit quos sequi laudantium voluptatem delectus!</p>
+            </div>
         </div>
-        <div class="col-4">
-            <img src="{% static 'images/frog-mushroom-tattoo.png' %}" alt="Black and grey tattoo of a frog sitting on top of a boletus mushroom. Smaller mushrooms surround them.">
+        <div
+            class="col-11 col-lg-5 d-flex justify-content-center align-items-center justify-content-lg-end align-items-lg-end">
+            <img src="{% static 'images/frog-mushroom-tattoo.png' %}" class="img-fluid hero-section__main-image"
+                alt="Black and grey tattoo of a frog sitting on top of a boletus mushroom. Smaller mushrooms surround them.">
         </div>
 
 
