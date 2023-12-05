@@ -303,13 +303,13 @@ ul {
 /*----------------------------------------------------------- Small Gallery */
 .small-gallery {
     background-color: var(--clr-black);
-    padding-top: 3rem;
-    padding-bottom: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
 }
 
 .gallery__image {
-    max-width: 394px;
-    max-height: 629px;
+    /* max-width: 394px;
+    max-height: 629px; */
     margin: 2rem 0;
     border-radius: 50% 50% 0 0;
     gap: 3rem;
@@ -321,6 +321,7 @@ ul {
     min-height: 20vh;
     border-top: 3px solid var(--clr-gold);
     background-color: var(--clr-black);
+    padding: 5rem 0;
 }
 
 /*--------------------------------------------------------------------------------- Media Queries */
