@@ -37,9 +37,9 @@
                     <p class="card-text text-center">{{ booking.confirmed_time }}</p>
                     <p class="card-text text-center d-none d-xl-block">{{ booking.tattoo_description | truncatechars:75 }}</p>
                     <div
-                        class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-1">
+                        class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-3">
                         <a href="{% url 'update_booking' booking.id %}" class="btn__rectangle text-center">Edit</a>
-                        <button class="btn__rectangle" data-bs-toggle="modal"
+                        <button class="btn__rectangle btn__rectangle--delete" data-bs-toggle="modal"
                             data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
                     </div>
                 </div>
@@ -52,12 +52,15 @@
                             <h5 class="modal-title" id="deleteModalLabel">Delete booking?</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body text-center">
                             Are you sure you want to delete your booking?
+                            <br>
+                            Your deposit will be lost.
+                            <br>
                             This action cannot be undone.
                         </div>
-                        <div class="modal-footer">
-                            <a href="{% url 'delete_booking' booking.id %}" class="btn__rectangle">Delete</a>
+                        <div class="modal-footer d-flex flex-column justify-content-center align-items-center gap-4">
+                            <a href="{% url 'delete_booking' booking.id %}" class="btn__rectangle btn__rectangle--delete">Delete</a>
                             <button type="button" class="btn__rectangle" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -77,7 +80,7 @@
         <div class="col-10 d-flex d-flex-column flex-xl-row flex-wrap justify-content-around align-items-center">
             <!--Approved Booking info-->
             {% for booking in pending_bookings %}
-            <div class="card card--dark mx-3">
+            <div class="card card--dark">
                 <div class="card-body card-body--light d-flex flex-column justify-content-end align-items-center">
                     <h5 class="card-title card-title--light text-center">Requested date:</h5>
                     <p class="card-text text-center">{{ booking.preferred_day}}</p>
@@ -85,7 +88,7 @@
                     <p class="card-text text-center">{{ booking.preferred_time }}</p>
                     <p class="card-text text-center d-none d-xl-block">{{ booking.tattoo_description | truncatechars:75 }}</p>
                     <div
-                        class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-2">
+                        class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-3">
                         <a href="{% url 'update_booking' booking.id %}" class="btn__rectangle text-center">Edit</a>
                         <button class="btn__rectangle" data-bs-toggle="modal"
                             data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>

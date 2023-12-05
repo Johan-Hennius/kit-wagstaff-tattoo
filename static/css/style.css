@@ -193,15 +193,45 @@ ul {
     width: 15rem;
     border: none;
     text-decoration: none;
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99),
+        color 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.btn__rectangle:hover,
+.btn__rectangle--small:hover {
+    scale: 1.1;
+    color: var(--clr-black);
+}
+
+.btn__rectangle--small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-l-grey);
+    background-color: var(--clr-gold);
+    font-family: var(--ff-secondary);
+    font-size: clamp(1rem, 1.5vw, 175rem);
+    height: 5rem;
+    width: 15rem;
+    border: none;
+    text-decoration: none;
     margin: 1rem 2rem;
     transition:
         scale 500ms cubic-bezier(.37, 0, .45, .99),
         color 500ms cubic-bezier(.37, 0, .45, .99);
 }
 
-.btn__rectangle:hover {
-    scale: 1.1;
-    color: var(--clr-black);
+.btn__rectangle--delete {
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99),
+        color 500ms cubic-bezier(.37, 0, .45, .99),
+        background-color 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.btn__rectangle--delete:hover {
+    background-color: var(--clr-red);
+    color: var(--clr-l-grey);
 }
 
 /*----------------------------------------------------------- Hero and about button holders */
@@ -215,6 +245,41 @@ ul {
 
 .about-section__book-button__holder {
     width: 102%;
+}
+
+/*--------------------------------------------------------------------------------- Forms */
+.form-control,
+.form-select {
+    background-color: #fafafa;
+    border: 3px solid var(--clr-gold);
+    border-radius: 0;
+    color: var(--clr-black);
+    font-family: var(--ff-text);
+}
+
+.form-label,
+.form-check-label {
+    color: var(--clr-black);
+    font-family: var(--clr-black);
+}
+
+/*--------------------------------------------------------------------------------- Modal */
+.modal-dialog {
+    background-color: var(--clr-l-grey);
+    border-radius: 0;
+    border: 3px solid var(--clr-gold);
+}
+
+.modal-title {
+    font-family: var(--ff-secondary);
+    color: var(--clr-black);
+    font-size: var(--fs-text);
+}
+
+.modal-body {
+    font-family: var(--ff-text);   
+    color: var(--clr-black);
+    font-size: var(--ff-text);
 }
 
 /*----------------------------------------------------------- Nav */
@@ -391,8 +456,8 @@ ul {
 .card {
     border: none;
     background-color: var(--clr-l-grey);
-    width: 25rem; 
-    height: 40rem; 
+    width: 25rem;
+    height: 40rem;
     border-radius: 50% 50% 0 0;
     margin: 2rem 2rem;
 }
@@ -432,7 +497,7 @@ ul {
 }
 
 /*--------------------------------------------------------------------------------- Terms */
-.terms__text__wrapper{
+.terms__text__wrapper {
     margin-bottom: 5rem;
 }
 
@@ -463,9 +528,10 @@ ul {
     /*-----------------------------------------------------------My Bookings */
     .card {
         border: none;
-        width: 20rem; 
-        height: 35rem; 
+        width: 20rem;
+        height: 35rem;
         border-radius: 50% 50% 0 0;
+        margin: 2rem 0;
     }
 
 }
