@@ -5,6 +5,7 @@
 
 
 <div class="container-fluid">
+    <!--Hero section-->
     <div class="row hero-section pb-5 pt-2 justify-content-lg-around justify-content-center align-items-center">
         <div
             class="col-md-11 col-lg-5 d-lg-block d-flex flex-column justify-content-center align-items-center hero-section__titles">
@@ -22,7 +23,7 @@
         </div>
         <div
             class="col-11 col-lg-5 d-flex justify-content-center align-items-center justify-content-lg-end align-items-lg-end">
-            <img src="{% static 'images/frog-mushroom-tattoo.png' %}" class="img-fluid hero-section__main-image"
+            <img src="{% static 'images/octopus.png' %}" class="img-fluid hero-section__main-image"
                 alt="Black and grey tattoo of a frog sitting on top of a boletus mushroom. Smaller mushrooms surround them.">
         </div>
     </div>
@@ -43,7 +44,7 @@
         <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
             <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
                 class="hero-section__book-button">Book</a>
-    </div>
+        </div>
     </section>
 </div>
 
