@@ -45,17 +45,27 @@
 
     <!--Small gallery-->
     <section class="row justify-content-center align-items-center small-gallery">
-        <div class="col-11 d-flex flex-wrap justify-content-around align-items-center gap-2 w-100">
+        <div class="col-11 d-flex flex-column flex-lg-row justify-content-around align-items-center gap-2 w-100">
+            <div class="image__wrapper d-block d-lg-none">
+                <img src="{% static 'images/kit-image-1.png' %}" class="gallery__image img-fluid"
+                    alt="Photograph of the artist - Kit Wagstaff">
+            </div>
             <div class="image__wrapper">
                 <img src="{% static 'images/dino-tarot-tattoo.png' %}" class="gallery__image img-fluid"
                     alt="Colour tattoo of an earth tarot card containing a Roaring T-Rex with the caption 'when dinosaurs ruled'">
             </div>
+            <div class="image__wrapper d-none d-lg-block">
             <img src="{% static 'images/kit-image-1.png' %}" class="gallery__image img-fluid"
                 alt="Photograph of the artist - Kit Wagstaff">
+            </div>
+            <div class="image__wrapper">
             <img src="{% static 'images/boar-tattoo.png' %}" class="gallery__image img-fluid"
                 alt="Black and Grey tattoo of a boar surrounded by mushrooms, nettles, and flowers. A dagger with a celtic pattern sits in its head">
+            </div>
+            <div class="image__wrapper">
             <img src="{% static 'images/t-rex-forearm-tattoo.png' %}" class="gallery__image img-fluid"
                 alt="Colour tatto of a T-Rex roaring with flowers underneath">
+            </div>
         </div>
     </section>
 
