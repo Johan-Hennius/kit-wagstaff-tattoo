@@ -431,6 +431,21 @@ ul {
     font-size: var(--fs-text);
 }
 
+/*--------------------------------------------------------------------------------- Terms */
+.terms__text__wrapper{
+    margin-bottom: 5rem;
+}
+
+.terms__text {
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+    color: var(--clr-black);
+}
+
+.terms__hr {
+    border-top: 3px solid var(--clr-gold);
+}
+
 /*--------------------------------------------------------------------------------- Media Queries */
 @media (max-width: 1400px) {
 
