@@ -381,7 +381,7 @@ ul {
 /*----------------------------------------------------------- Approved */
 .my-bookings__approved {
     background-color: var(--clr-black);
-    padding: 10rem 0;
+    padding: 7rem 0;
 }
 
 .hero-section__second-title--white {
@@ -391,6 +391,10 @@ ul {
 .card {
     border: none;
     background-color: var(--clr-l-grey);
+    width: 25rem; 
+    height: 40rem; 
+    border-radius: 50% 50% 0 0;
+    margin: 2rem 2rem;
 }
 
 .card-body {
@@ -441,7 +445,13 @@ ul {
 
 @media (max-width: 1200px) {
 
-    /*----------------------------------------------------------- Small Gallery */
+    /*-----------------------------------------------------------My Bookings */
+    .card {
+        border: none;
+        width: 20rem; 
+        height: 35rem; 
+        border-radius: 50% 50% 0 0;
+    }
 
 }
 
@@ -462,7 +472,7 @@ ul {
         margin-top: -2%;
     }
 
-    /*--------------------------------------------------------------------------------- My Bookings */
+    /*------------------------------------------------------------My Bookings */
     /*----------------------------------------------------------- Hero section */
     .hero-section--my-bookings {
         background-color: var(--clr-l-grey);
