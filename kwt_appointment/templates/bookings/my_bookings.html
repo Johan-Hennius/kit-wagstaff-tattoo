@@ -67,22 +67,36 @@
                 <h2 class="hero-section__second-title hero-section__second-title--white align-self-end">Approved</h2>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-8">
-            {% for booking in pending_bookings %}
-            <img src="{{ booking.reference_images.url }}" alt="pewpew">
-            <div style="color: red;">
-                <h2>
-                    {{ booking.preferred_day }}
-                    {{ booking.tattoo_description | truncatechars:75 }}
-                </h2>
-                <a href="{% url 'update_booking' booking.id %}" class="btn btn-outline-dark w-auto text-center">Edit</a>
-                <button class="btn btn-outline-dark w-auto text-center" data-bs-toggle="modal"
-                    data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
-            </div>
 
-            <div class="modal fade" id="deleteModal-{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    </section>
+
+    <!--Pending Bookings-->
+    <section class="row my-bookings__pending justify-content-center align-items-center">
+
+        <div class="col-10 d-flex justify-content-around align-items-center">
+            <!--Approved Booking Title-->
+            <div class="col-8 d-flex flex-column justify-content-start align-items-center">
+                <h2 class="hero-section__second-title align-self-start">Pending</h2>
+    </div>
+            <!--Approved Booking info-->
+            {% for booking in pending_bookings %}
+            <div class="card card--dark mx-3" style="width: 25rem; height: 40rem; border-radius: 50% 50% 0 0;">
+                <div class="card-body card-body--light d-flex flex-column justify-content-end align-items-center">
+                    <h5 class="card-title card-title--light text-center">Requested date:</h5>
+                    <p class="card-text text-center">{{ booking.preferred_day}}</p>
+                    <h5 class="card-title card-title--light mb-3 text-center">Requested time:</h5>
+                    <p class="card-text text-center">{{ booking.preferred_time }}</p>
+                    <p class="card-text text-center">{{ booking.tattoo_description | truncatechars:75 }}</p>
+                    <div
+                        class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-2">
+                        <a href="{% url 'update_booking' booking.id %}" class="btn__rectangle text-center">Edit</a>
+                        <button class="btn__rectangle" data-bs-toggle="modal"
+                    data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="deleteModal-{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -94,13 +108,12 @@
                             This action cannot be undone.
                         </div>
                         <div class="modal-footer">
-                            <a href="{% url 'delete_booking' booking.id %}" class="btn btn-danger">Delete</a>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="{% url 'delete_booking' booking.id %}" class="btn__rectangle">Delete</a>
+                            <button type="button" class="btn__rectangle" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
-
             {% endfor %}
         </div>
     </div>
