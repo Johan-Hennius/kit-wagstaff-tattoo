@@ -38,7 +38,7 @@
                         class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-2">
                         <a href="{% url 'update_booking' booking.id %}" class="btn__rectangle text-center">Edit</a>
                         <button class="btn__rectangle" data-bs-toggle="modal"
-                    data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
+                            data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
             <!--Approved Booking Title-->
             <div class="col-8 d-flex flex-column justify-content-start align-items-center">
                 <h2 class="hero-section__second-title align-self-start">Pending</h2>
-    </div>
+            </div>
             <!--Approved Booking info-->
             {% for booking in pending_bookings %}
             <div class="card card--dark mx-3" style="width: 25rem; height: 40rem; border-radius: 50% 50% 0 0;">
@@ -91,7 +91,7 @@
                         class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-2">
                         <a href="{% url 'update_booking' booking.id %}" class="btn__rectangle text-center">Edit</a>
                         <button class="btn__rectangle" data-bs-toggle="modal"
-                    data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
+                            data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
                     </div>
                 </div>
             </div>
@@ -122,14 +122,8 @@
     <section class="row d-flex justify-content-center align-items-center button__section">
         <div class="col-10 d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
             <button class="btn__rectangle" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
-    </div>
+        </div>
     </section>
 </div>
-
-
-
-
-
-
 
 {% endblock %}
