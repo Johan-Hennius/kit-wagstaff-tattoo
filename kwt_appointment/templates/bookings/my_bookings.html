@@ -5,25 +5,45 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-8">
-            {% for booking in approved_bookings %}
-            <img src="{{ booking.reference_images.url }}" alt="pewpew" style="width: 10rem;">
-            <p>PEWPEWPEW</p>
-            <div style="color: blue;">
-                <h2>
-                    {{ booking.confirmed_day}}
-                    {{ booking.confirmed_time }}
-                    {{ booking.preferred_day }}
-                    {{ booking.tattoo_description | truncatechars:75 }}
-                </h2>
-                <a href="{% url 'update_booking' booking.id %}" class="btn btn-outline-dark w-auto text-center">Edit</a>
-                <button class="btn btn-outline-dark w-auto text-center" data-bs-toggle="modal"
-                    data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
+<div class="container-fluid">
+    <!--Hero section-->
+    <section class="row hero-section--my-bookings pt-2 justify-content-center align-items-center">
+        <!--Titles-->
+        <div
+            class="col-10 d-flex flex-column justify-content-center align-items-center hero-section__titles mb-5">
+            <div class="mb-lg-4 mb-md-2">
+                <h1 class="hero-section__first-title hero-section__first-title--my_bookings">My</h1>
             </div>
+            <div>
+                <h2 class="hero-section__second-title">Bookings</h2>
+            </div>
+        </div>
+    </section>
 
-            <div class="modal fade" id="deleteModal-{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <!--Approved Bookings-->
+    <section class="row my-bookings__approved justify-content-center align-items-center">
+
+        <div class="col-10 d-flex justify-content-around align-items-center">
+
+            <!--Approved Booking info-->
+            {% for booking in approved_bookings %}
+            <div class="card" style="width: 25rem; height: 40rem; border-radius: 50% 50% 0 0;">
+                <div class="card-body d-flex flex-column justify-content-end align-items-center">
+                    <h5 class="card-title text-center">Confirmed date:</h5>
+                    <p class="card-text text-center">{{ booking.confirmed_day}}</p>
+                    <h5 class="card-title mb-3 text-center">Confirmed time:</h5>
+                    <p class="card-text text-center">{{ booking.confirmed_time }}</p>
+                    <p class="card-text text-center">{{ booking.tattoo_description | truncatechars:75 }}</p>
+                    <div
+                        class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-2">
+                        <a href="{% url 'update_booking' booking.id %}" class="btn__rectangle text-center">Edit</a>
+                        <button class="btn__rectangle" data-bs-toggle="modal"
+                    data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="deleteModal-{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -35,13 +55,12 @@
                             This action cannot be undone.
                         </div>
                         <div class="modal-footer">
-                            <a href="{% url 'delete_booking' booking.id %}" class="btn btn-danger">Delete</a>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="{% url 'delete_booking' booking.id %}" class="btn__rectangle">Delete</a>
+                            <button type="button" class="btn__rectangle" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
-
             {% endfor %}
         </div>
     </div>
