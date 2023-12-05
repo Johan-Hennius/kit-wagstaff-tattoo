@@ -2,27 +2,38 @@
 
 {% load i18n %}
 
-{% block title %}{% trans "Register" %}{% endblock title %}
+{% block title %}Register{% endblock title %}
 
 {% block content %}
-<div class="container text-center">
-  <div class="row justify-content-center align-items-center mt-5">
-    <div class="col-8">
-      <h1>{% trans "Register" %}</h1>
+<div class="container-fluid text-center registration__section">
+  <!--Hero section-->
+  <section class="row hero-section--my-bookings pt-2 justify-content-center align-items-center">
+    <!--Titles-->
+    <div
+        class="col-10 d-flex flex-column justify-content-center align-items-center hero-section__titles">
+        <div>
+            <h2 class="registration__title">Register</h2>
+        </div>
+        <div class="login__text">
+          <p>
+            To book an appointment and update future appointments, please create an account.
+          </p>
+          <p>
+            Already have an account? Then please <a href="{{ login_url }}">login</a>.
+          </p>
+        </div>
+    </div>
+</section>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-8 col-xl-4 col-lg-6 col-10 justify-content-center align-items-center mb-5">
 
-      <p class="my-2">{% blocktrans %}To book an appointment and update future appointments, please create an account.{% endblocktrans %}
-      </p>
-
-      <p class="my-2">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">login</a>.{% endblocktrans %}
-      </p>
-
-      <form class="form p-3" id="signup_form" method="post" action="{% url 'account_signup' %}">
+      <form class="form p-3 justify-content-center align-items-center mb-5" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form | crispy }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button type="submit" class="btn btn-outline-dark w-25 form__button">Register</button>
+        <button type="submit" class="btn__rectangle mx-auto my-5">Register</button>
       </form>
     </div>
   </div>

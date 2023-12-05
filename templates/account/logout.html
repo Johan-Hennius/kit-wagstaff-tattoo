@@ -2,26 +2,29 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block head_title %}Logout{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row justify-content-center align-items-center mt-5">
-        <div class="col-8">
-            <h3>{% trans "Sign Out" %}</h3>
-
-            <p>{% trans 'Are you sure you want to sign out?' %}</p>
+<div class="container-fluid text-center registration__section">
+    <!--Hero section-->
+    <section class="row hero-section--my-bookings pt-2 justify-content-center align-items-center">
+        <!--Titles-->
+        <div
+            class="col-10 d-flex flex-column justify-content-center align-items-center hero-section__titles">
+            <div>
+                <h2 class="registration__title">Logout?</h2>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+    </section>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-xl-4 col-lg-6 col-10 d-flex justify-content-center align-items-center mb-5">
 
             <form method="post" action="{% url 'account_logout' %}">
                 {% csrf_token %}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn btn-signup right" type="submit">{% trans 'Sign Out' %}</button>
+                <button class="btn__rectangle btn__rectangle--delete my-5" type="submit">Logout</button>
             </form>
         </div>
     </div>

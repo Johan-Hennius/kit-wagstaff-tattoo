@@ -2,33 +2,42 @@
 
 {% load i18n %}
 
-{% block title %}{% trans "Login" %}{% endblock title %}
+{% block title %}Login{% endblock title %}
 
 {% block content %}
-<div class="container text-center">
-  <div class="row d-flex justify-content-center align-items-center mt-5">
-    <div class="col-8">
-      <h1>{% trans "Login" %}</h1>
+<div class="container-fluid text-center registration__section">
+  <!--Hero section-->
+  <section class="row hero-section--my-bookings pt-2 justify-content-center align-items-center">
+    <!--Titles-->
+    <div class="col-10 d-flex flex-column justify-content-center align-items-center hero-section__titles mb-2">
+      <div>
+        <h2 class="registration__title">Login</h2>
+      </div>
+      <div class="login__text">
+        To make a booking and update your existing bookings,
+        <br>
+        please <a href="{{ signup_url }}">register</a> first.
+      </div>
+    </div>
+  </section>
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-xl-4 col-lg-6 col-10 justify-content-center align-items-center mb-5">
 
-      <p>{% blocktrans %}To make a booking and update your existing bookings, please
-        <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}</p>
-
-
-      <form class="form p-3" method="POST" action="{% url 'account_login' %}">
+      <form class="form p-3 justify-content-center align-items-center mb-5" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form | crispy }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
 
-        <button class="btn btn-outline-dark mb-2 w-25 form__button" type="submit">{% trans "Sign In" %}</button>
-        <a class="button secondaryAction d-block"
+        <button class="btn__rectangle mx-auto my-3" type="submit">Login</button>
+        <a class="button secondaryAction d-block my-3"
           href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
 
       </form>
     </div>
   </div>
 </div>
-      
+
 
 {% endblock %}

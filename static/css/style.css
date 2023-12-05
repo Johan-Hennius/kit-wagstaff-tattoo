@@ -248,6 +248,7 @@ ul {
 }
 
 /*--------------------------------------------------------------------------------- Forms */
+
 .form-control,
 .form-select {
     background-color: #fafafa;
@@ -261,6 +262,23 @@ ul {
 .form-check-label {
     color: var(--clr-black);
     font-family: var(--clr-black);
+}
+
+/*--------------------------------------------------------------------------------- Registration / login / logout */
+.registration__section {
+    min-height: 90vh;
+}
+
+.registration__title {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-subtitle);
+    color: var(--clr-black);
+}
+
+.login__text {
+    font-family: var(--ff-text);
+    color: var(--clr-black);
+    font-size: var(--fs-text);
 }
 
 /*--------------------------------------------------------------------------------- Modal */
@@ -277,7 +295,7 @@ ul {
 }
 
 .modal-body {
-    font-family: var(--ff-text);   
+    font-family: var(--ff-text);
     color: var(--clr-black);
     font-size: var(--ff-text);
 }
