@@ -529,6 +529,19 @@ ul {
     border-top: 3px solid var(--clr-gold);
 }
 
+/*--------------------------------------------------------------------------------- Tattoo Care */
+.tattoo-care__quote {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-subtitle-2);
+    color: var(--clr-black);
+}
+
+.tattoo-care__subtitle {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-text);
+    color: var(--clr-black);
+}
+
 /*--------------------------------------------------------------------------------- Media Queries */
 @media (max-width: 1400px) {
 
