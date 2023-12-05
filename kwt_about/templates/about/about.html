@@ -27,41 +27,43 @@
             <img src="{% static 'images/kit-about-image.png' %}" class="img-fluid hero-section__main-image"
                 alt="Photograph of the artist - Kit Wagstaff Tattoo">
         </div>
-</div>
-<!--About section-->
-<section class="row justify-content-around flex-column flex-xl-row align-items-center about-section">
-    <div class="col-xl-4 col-10 d-flex justify-content-around align-items-center">
-        <!-- <div class="image__wrapper d-none d-xxl-block">
+    </section>
+    <!--About section-->
+    <section class="row justify-content-around flex-column flex-xl-row align-items-center about-section">
+        <div class="col-xl-4 col-10 d-flex justify-content-around align-items-center">
+            <!-- <div class="image__wrapper d-none d-xxl-block">
             <img src="{% static 'images/dino-tarot-tattoo.png' %}" class="img-fluid gallery__image"
                 alt="Colour tattoo of an earth tarot card containing a Roaring T-Rex with the caption 'when dinosaurs ruled'">
         </div> -->
-        <div class="image__wrapper d-none d-lg-block">
-            <img src="{% static 'images/bodies-are-weird.png' %}" class="img-fluid gallery__image"
-                alt="Photograph of the artist's workspace with a small flag that states bodies are weird">
+            <div class="image__wrapper d-none d-lg-block">
+                <img src="{% static 'images/bodies-are-weird.png' %}" class="img-fluid gallery__image"
+                    alt="Photograph of the artist's workspace with a small flag that states bodies are weird">
+            </div>
         </div>
-    </div>
-    <div class="col-xl-6 col-10 about-section__text-wrapper">
-        <p class="about-section__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi reprehenderit quia placeat
-            officiis voluptas dicta animi soluta distinctio eos esse non error, molestiae incidunt illo sit?
-            Corporis facere nulla tempore fugit minima incidunt et a quis, odio cupiditate commodi ullam autem,
-            tempora soluta exercitationem accusantium illum cum? Laborum error ipsa, suscipit laboriosam
-            voluptate, earum reprehenderit minus explicabo veritatis est corrupti voluptatibus odio quibusdam
-            odit quos sequi laudantium voluptatem delectus! Omnis adipisci quisquam accusamus exercitationem
-            recusandae illo! Aut quod magnam impedit fuga reiciendis deserunt, numquam cum in at? Recusandae,
-            debitis neque cupiditate hic quisquam perferendis sequi ducimus minima omnis sapiente repellat
-            veritatis non maiores, culpa facilis beatae quidem rem, temporibus error enim soluta. Amet cumque
-            distinctio labore iure repudiandae, facilis ullam facere saepe eveniet, numquam quasi possimus.
-            Voluptas eos rem tempora tempore delectus rerum exercitationem, distinctio inventore iusto, neque
-            facere alias eius vero, quae dolore maxime. In ut libero iusto.</p>
-    </div>
-</section>
-<!--Large screen book button-->
-<section
-    class="row hero-section__book-button__holder about-section__book-button__holder d-flex justify-content-around py-5">
-    <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
-        <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
-            class="hero-section__book-button">Book</a>
-    </div>
-</section>
+        <div class="col-xl-6 col-10 about-section__text-wrapper">
+            <p class="about-section__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi reprehenderit quia placeat
+                officiis voluptas dicta animi soluta distinctio eos esse non error, molestiae incidunt illo sit?
+                Corporis facere nulla tempore fugit minima incidunt et a quis, odio cupiditate commodi ullam autem,
+                tempora soluta exercitationem accusantium illum cum? Laborum error ipsa, suscipit laboriosam
+                voluptate, earum reprehenderit minus explicabo veritatis est corrupti voluptatibus odio quibusdam
+                odit quos sequi laudantium voluptatem delectus! Omnis adipisci quisquam accusamus exercitationem
+                recusandae illo! Aut quod magnam impedit fuga reiciendis deserunt, numquam cum in at? Recusandae,
+                debitis neque cupiditate hic quisquam perferendis sequi ducimus minima omnis sapiente repellat
+                veritatis non maiores, culpa facilis beatae quidem rem, temporibus error enim soluta. Amet cumque
+                distinctio labore iure repudiandae, facilis ullam facere saepe eveniet, numquam quasi possimus.
+                Voluptas eos rem tempora tempore delectus rerum exercitationem, distinctio inventore iusto, neque
+                facere alias eius vero, quae dolore maxime. In ut libero iusto.</p>
+        </div>
+    </section>
+    <!--Large screen book button-->
+    <section
+        class="row hero-section__book-button__holder about-section__book-button__holder d-flex justify-content-around py-5">
+        <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
+            <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
+                class="hero-section__book-button">Book</a>
+        </div>
+    </section>
+</div>
+
 {% endblock %}
