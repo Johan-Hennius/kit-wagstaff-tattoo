@@ -134,6 +134,8 @@ ul {
     padding-left: 0;
 }
 
+
+
 /*----------------------------------------------------------- Buttons */
 /*-------------------------------------- Book button */
 .hero-section__book-button__holder {
@@ -192,6 +194,19 @@ ul {
 .btn__rectangle:hover {
     scale: 1.1;
     color: var(--clr-black);
+}
+
+/*----------------------------------------------------------- Hero and about button holders */
+.button__section,
+.about-section__book-button__holder {
+    min-height: 20vh;
+    border-top: 3px solid var(--clr-gold);
+    background-color: var(--clr-black);
+    padding: 5rem 0;
+}
+
+.about-section__book-button__holder {
+    width: 102%;
 }
 
 /*----------------------------------------------------------- Nav */
@@ -296,9 +311,6 @@ ul {
     margin-top: -3%;
 }
 
-.hero-section__main-image {
-    
-}
 
 /*----------------------------------------------------------- Small Gallery */
 .small-gallery {
@@ -308,27 +320,62 @@ ul {
 }
 
 .gallery__image {
-    /* max-width: 394px;
-    max-height: 629px; */
     margin: 2rem 0;
     border-radius: 50% 50% 0 0;
     gap: 3rem;
     padding: 0 1.5rem;
 }
 
-/*----------------------------------------------------------- Button section */
-.button__section {
-    min-height: 20vh;
-    border-top: 3px solid var(--clr-gold);
-    background-color: var(--clr-black);
-    padding: 5rem 0;
+
+
+/*--------------------------------------------------------------------------------- About */
+/*----------------------------------------------------------- Hero section */
+.hero-section--about {
+    padding-top: 5rem;
 }
+
+.hero-section__main-image {
+    border-radius: 50% 50% 0 0;
+}
+
+.hero-section--about__summary {
+    color: var(--clr-black);
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+    padding-left: 25%;
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-top: -3%;
+}
+
+/*----------------------------------------------------------- About section */
+.about-section {
+    background-color: var(--clr-black);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.about-section__text {
+    text-align: start;
+    color: var(--clr-l-grey);
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+    width: 90%;
+    height: auto;
+    padding: 3rem 1rem;
+}
+
 
 /*--------------------------------------------------------------------------------- Media Queries */
 @media (max-width: 1400px) {
     
     /*----------------------------------------------------------- Small Gallery */
     
+    /*----------------------------------------------------------- Small Gallery */
+    .about-section__text {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 @media (max-width: 1200px) {
