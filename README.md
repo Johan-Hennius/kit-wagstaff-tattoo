@@ -32,6 +32,17 @@ https://pandao.github.io/editor.md/en.html
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## UX
+A local tattoo artist recently approached me and asked if i could design and build a website for them. I asked them what they wanted the website to be - was it to be a portfolio site or more of a shop?  
+They replied with a story:  
+Many tattoo artists and their customers use instagram as a platform to communicate. Instagram is used to contact artists, book appointments, send reference images and so on. This method presents many issues surrounding time. Time spent looking for previous images, time spent copying and pasting terms & conditions, time spent asking the same questions over and over again. This time should be used to design tattoos, learn techniques and improve the craft.  
+The artist said that this site needs to include a booking service where clients can request a booking that contains all the necessary information for the artist to assign an appointment and get started with their design work.  
+This booking system also needs to give the client the option of editing or deleting their appointment, in case something changes.  
+The aim of this system is not completely remove the human-aspect of the tattoo booking process. There will be contact information available on the site, in case further questions need answering.  
+The artist also requested that a portfolio page should be included which shows the client a variety of the artist's designs, with the most recent being displayed first.  
+The remaining pages would be dedicated to; about the artist, terms & conditions, and tattoo care.  
+
+
+
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
