@@ -5,7 +5,7 @@
 ![Images of Kit Wagstaff tattoo website](documentation/design-images/kwt-responsive-views-01.png)
   
   
-## UX
+## Overview
 A local tattoo artist "Kit Wagstaff" recently approached me and asked if i could design and build a website for them. I asked them what they wanted the website to be - was it to be a portfolio site or more of a shop?  
 They replied with a story:  
 Many tattoo artists and their customers use instagram as a platform to communicate. Instagram is used to contact artists, book appointments, send reference images and so on. This method presents many issues surrounding time. Time spent looking for previous images, time spent copying and pasting terms & conditions, time spent asking the same questions over and over again. This time should be used to design tattoos, learn techniques and improve the craft.  
@@ -22,114 +22,88 @@ We began the development process by identifying the artist's target audience:
 - Alternative style 
 - Climate concious and LGBTQ+ supporter
 
-Understanding the artist's target audience will give us the necessary information to create user stories which will ultimately dictate the site's design and features.
-
-
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Understanding the artist's target audience will give us the necessary information to create user stories which will ultimately dictate the site's design and features.  
+  
+## UX
+### Overview  
+I spoke to the artist and gathered as much information as i could about them as a person and as an artist. I then asked them if they had a design in mind for their website. They said that it would be great to base the design off of their gift voucher:
+   
+![Image of Kit Wagstaff tattoo voucher](documentation/design-images/kwt-voucher.png)
+   
+The next step was to create user stories with pragmatic success criteria.  
+These user stories were used to create issues which then populated the project's kanban board. 
+This information combined with the site's objective guided me on my search for similar websites.   
+After an idea had formed, i drew up a wireframe using Adobe XD which was then showed to the artist.  
+Once the wireframe was completed and approved, we were ready for the build. 
 
 ### Colour Scheme
+The colour scheme was created using the gift voucher as a guide in order to ensure continuity.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- `#000` used for primary colour.
+- `#EEE9E3` used for secondary colour.
+- `#A51813` used for primary highlights.
+- `#BD8E3C` used for secondary highlights.
 
-Explain your colours and the colour scheme.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
+![Image of Kit Wagstaff tattoo voucher](documentation/design-images/kwt-color-scheme.png)
+  
+This colour scheme was placed within the `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
 
 ```css
 :root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
+    /* Colours */
+    --clr-red: #A51813;
+    --clr-gold: #BD8E3C;
+    --clr-black: #000;
+    --clr-l-grey: #EEE9E3;
 }
 ```
-
+  
 ### Typography
+The fonts were selected using the gift voucher as a guide. The exact fonts used for the gift voucher were not available to use on site, so alternatives were used instead.  
+The fonts were imported from googlefonts and cdnfonts.
+The navbar's hamburger icon was imported from FontAwesome.  
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- [PlainGermanica](https://www.cdnfonts.com/germanica-family.font) was used as the primary title font.
+- [Gabriela](https://fonts.google.com/specimen/Gabriela) was used as the secondary title and main text font.
+- [GoboldThin](https://www.cdnfonts.com/gobold.font) was used and the tertiary font for menus, buttons, and titles.
+  
+These fonts and their main sizes were placed within the `:root` variables to easily update the global font family and font sizes by changing only one value, instead of everywhere in the CSS file.
+  
+```css
+:root {
+    /* Font family */
+    --ff-primary: 'PlainGermanica', sans-serif;
+    --ff-secondary: 'Gobold Thin', sans-serif;
+    --ff-text: 'Gabriela', serif;
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
-
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
-
+    /* Font sizes */
+    --fs-title: clamp(5rem, 15vw, 16rem);
+    --fs-title-2: clamp(5rem, 12vw, 16rem);
+    --fs-subtitle: clamp(3rem, 10vw, 14rem);
+    --fs-subtitle-2: clamp(2rem, 7vw, 5rem);
+    --fs-text: 1.35rem;
+}
+``` 
+  
 ## User Stories
+### Site Users
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- As a customer i want to easily book a tattoo appoinment so that i can avoid convoluted booking processes
+- As a customer i want to have the ability to update an appointment so that i can request changes if they are needed
+- As a customer i want to ensure that only i can access my appointments so that unknown users cannot edit my appointments or see personal info
+- As a customer i want to get to know the artist so that i feel comfortable
 
-In this section, list all of your user stories for the project.
+### Site Owner
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- As a site owner i want to get as much information as possible in the booking process so that the design process is straight forward
+- As a site owner i want to easily access my upcoming appointments so that i can manage my business effectively
+- As a site owner i want to give my clients clear instructions for tattoo after care so that they can avoid risk of infection
+- As a site owner i want to have a clean and intuitive site so that my customer's journey is effortless and encourages repeat visits
 
-### New Site Users
+### Developer 
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-
-### Returning Site Users
-
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-
-### Site Admin
-
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-
+- As a developer i want to ensure that the project's code is scalable and adheres to current standards so that future additions are fast to implement
+  
 ## Wireframes
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
@@ -151,73 +125,66 @@ for the Mobile, Tablet, and Desktop wireframes.
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+I concentrated on designing the wireframes for all pages on desktop first. 
+I then created one wireframe for tablet and one for mobile to provide a guide for placement and spacing. 
+I've used [AdobeXD](https://helpx.adobe.com/xd/get-started.html) to design the site's wireframes.
 
 ### Mobile Wireframes
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+<details>
+<summary> Click here to see the Mobile Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+  - ![home-mobile-view](documentation/design-images/iphone-home.png.png)
 
-About
-  - ![screenshot](documentation/wireframes/mobile-about.png)
-
-Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
-
-Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
-
-etc.
-  - repeat for any remaining mobile wireframes
-
-< / details >
+</details>
 
 ### Tablet Wireframes
 
-< details >
-< summary > Click here to see the Tablet Wireframes < / summary >
+<details>
+<summary> Click here to see the Tablet Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/tablet-home.png)
+  - ![home-tablet-view](documentation/design-images/ipad-home.png)
 
-About
-  - ![screenshot](documentation/wireframes/tablet-about.png)
-
-Contact
-  - ![screenshot](documentation/wireframes/tablet-contact.png)
-
-Gallery
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
-
-etc.
-  - repeat for any remaining tablet wireframes
-
-< / details >
+</details>
 
 ### Desktop Wireframes
 
-< details >
-< summary > Click here to see the Desktop Wireframes < / summary >
+<details>
+<summary> Click here to see the Desktop Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/desktop-home.png)
+  - ![desktop-home](documentation/wireframes/desktop-home.png)
 
 About
-  - ![screenshot](documentation/wireframes/desktop-about.png)
+  - ![desktop-about](documentation/wireframes/desktop-about.png)
 
-Contact
-  - ![screenshot](documentation/wireframes/desktop-contact.png)
+Portfolio
+  - ![desktop-portfolio](documentation/design-images/desktop-gallery.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
+My Bookings
+  - ![desktop-my-bookings](documentation/design-images/desktop-bookings.png)
 
-etc.
-  - repeat for any remaining desktop wireframes
+Book
+  - ![desktop-book](documentation/design-images/desktop-book.png)
 
-< / details >
+Update Booking
+  - ![desktop-update-booking](documentation/design-images/desktop-update.png)
+
+Register
+  - ![desktop-register](documentation/design-images/desktop-register.png)
+
+Login
+  - ![desktop-login](documentation/design-images/desktop-login.png)
+
+Terms & Conditions
+  - ![desktop-terms](documentation/design-images/desktop-terms.png)
+
+Tattoo Care
+  - ![desktop-tattoo-care](documentation/design-images/desktop-tattoo-care.png)
+  
+</details>
 
 ## Features
 
