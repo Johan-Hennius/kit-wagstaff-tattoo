@@ -499,7 +499,7 @@ ul {
 
 /*----------------------------------------------------------- Pending */
 .my-bookings__pending {
-    background-color: none;
+    background-color: unset;
     padding: 10rem 0;
 }
 
