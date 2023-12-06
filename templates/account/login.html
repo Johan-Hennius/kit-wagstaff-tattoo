@@ -11,16 +11,16 @@
     <!--Titles-->
     <div class="col-10 d-flex flex-column justify-content-center align-items-center hero-section__titles mb-2">
       <div>
-        <h2 class="registration__title">Login</h2>
+        <h2 class="registration__title hidden">Login</h2>
       </div>
-      <div class="login__text">
+      <div class="login__text t1_animation hidden">
         To make a booking and update your existing bookings,
         <br>
         please <a href="{{ signup_url }}">register</a> first.
       </div>
     </div>
   </section>
-  <div class="row d-flex justify-content-center align-items-center">
+  <div class="row d-flex justify-content-center align-items-center t2_animation hidden">
     <div class="col-xl-4 col-lg-6 col-10 justify-content-center align-items-center mb-5">
 
       <form class="form p-3 justify-content-center align-items-center mb-5" method="POST" action="{% url 'account_login' %}">
