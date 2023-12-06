@@ -1,0 +1,649 @@
+/* Fonts */
+@import url('https://fonts.cdnfonts.com/css/germanica-family');
+@import url('https://fonts.cdnfonts.com/css/gobold');
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
+:root {
+    /* Colours */
+    --clr-red: #A51813;
+    --clr-gold: #BD8E3C;
+    --clr-black: #000;
+    --clr-l-grey: #EEE9E3;
+
+    /* Font family */
+    --ff-primary: 'PlainGermanica', sans-serif;
+    --ff-secondary: 'Gobold Thin', sans-serif;
+    --ff-text: 'Gabriela', serif;
+
+    /* Font sizes */
+    --fs-title: clamp(5rem, 15vw, 16rem);
+    --fs-subtitle: clamp(3rem, 10vw, 14rem);
+    --fs-subtitle-2: clamp(2rem, 7vw, 5rem);
+    --fs-text: 1.35rem;
+}
+
+/* Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* Hidden from visual users - available to SR */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    /* added line */
+    border: 0;
+}
+
+/*--------------------------------------------------------------------------------- General */
+body,
+header {
+    background-color: var(--clr-l-grey);
+}
+
+main {
+    padding-top: 5rem;
+}
+
+header {
+    padding-bottom: 5%;
+}
+
+footer {
+    background-color: var(--clr-black);
+    border-top: 3px solid var(--clr-gold);
+}
+
+ul {
+    padding-left: 0;
+}
+
+
+
+/*----------------------------------------------------------- Buttons */
+/*-------------------------------------- Book button */
+.hero-section__book-button__holder {
+    width: 100%;
+}
+
+.hero-section__book-button__wrapper {
+    background-image: url('../images/star-design.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: clamp(11rem, 20vw, 19rem);
+    aspect-ratio: 1;
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.hero-section__book-button {
+    padding: 1em;
+    font-family: var(--ff-secondary);
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    color: var(--clr-l-grey);
+    text-decoration: none;
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99),
+        color 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.hero-section__book-button__wrapper:hover,
+.hero-section__book-button__wrapper:hover .hero-section__book-button {
+    scale: 1.1;
+}
+
+.hero-section__book-button:hover {
+    color: var(--clr-black);
+}
+
+/*-------------------------------------- Rectangular button */
+.btn__rectangle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-l-grey);
+    background-color: var(--clr-gold);
+    font-family: var(--ff-secondary);
+    font-size: clamp(1.2rem, 1.75vw, 1.75rem);
+    height: 5rem;
+    width: 15rem;
+    border: none;
+    text-decoration: none;
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99),
+        color 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.btn__rectangle:hover,
+.btn__rectangle--small:hover {
+    scale: 1.1;
+    color: var(--clr-black);
+}
+
+.btn__rectangle--small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-l-grey);
+    background-color: var(--clr-gold);
+    font-family: var(--ff-secondary);
+    font-size: clamp(1rem, 1.5vw, 175rem);
+    height: 5rem;
+    width: 15rem;
+    border: none;
+    text-decoration: none;
+    margin: 1rem 2rem;
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99),
+        color 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.btn__rectangle--delete {
+    transition:
+        scale 500ms cubic-bezier(.37, 0, .45, .99),
+        color 500ms cubic-bezier(.37, 0, .45, .99),
+        background-color 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.btn__rectangle--delete:hover {
+    background-color: var(--clr-red);
+    color: var(--clr-l-grey);
+}
+
+/*----------------------------------------------------------- Hero and about button holders */
+.button__section,
+.about-section__book-button__holder {
+    min-height: 20vh;
+    border-top: 3px solid var(--clr-gold);
+    background-color: var(--clr-black);
+    padding: 5rem 0;
+}
+
+.about-section__book-button__holder {
+    width: 102%;
+}
+
+/*--------------------------------------------------------------------------------- Forms */
+
+.form-control,
+.form-select {
+    background-color: #fafafa;
+    border: 3px solid var(--clr-gold);
+    border-radius: 0;
+    color: var(--clr-black);
+    font-family: var(--ff-text);
+}
+
+.form-label,
+.form-check-label {
+    color: var(--clr-black);
+    font-family: var(--clr-black);
+}
+
+/*--------------------------------------------------------------------------------- Registration / login / logout */
+.registration__section {
+    min-height: 90vh;
+}
+
+.registration__title {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-subtitle);
+    color: var(--clr-black);
+}
+
+.login__text {
+    font-family: var(--ff-text);
+    color: var(--clr-black);
+    font-size: var(--fs-text);
+}
+
+/*--------------------------------------------------------------------------------- Modal */
+.modal-dialog {
+    background-color: var(--clr-l-grey);
+    border-radius: 0;
+    border: 3px solid var(--clr-gold);
+}
+
+.modal-title {
+    font-family: var(--ff-secondary);
+    color: var(--clr-black);
+    font-size: var(--fs-text);
+}
+
+.modal-body {
+    font-family: var(--ff-text);
+    color: var(--clr-black);
+    font-size: var(--ff-text);
+}
+
+/*----------------------------------------------------------- Nav */
+.navbar {
+    background-color: var(--clr-l-grey) !important;
+    padding: 1.5rem 2rem;
+    border-bottom: 3px solid var(--clr-gold);
+}
+
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-toggler__icon {
+    color: var(--clr-black);
+}
+
+.nav-item a,
+.navbar-brand,
+.nav-item button {
+    color: var(--clr-black);
+    font-family: var(--ff-secondary);
+    font-size: 0.9rem;
+    transition:
+        color 500ms cubic-bezier(.37, 0, .45, .99),
+        letter-spacing 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.nav-item a:hover,
+.navbar-brand:hover,
+.nav-item button:hover {
+    color: var(--clr-gold);
+    letter-spacing: 0.1rem;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.nav-item button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item .nav__logout {
+    color: var(--clr-red);
+}
+
+/*----------------------------------------------------------- Footer */
+.footer__wrapper {}
+
+.footer__list a,
+.footer__info p,
+.footer__info a {
+    color: var(--clr-l-grey);
+    text-decoration: none;
+    font-family: var(--ff-secondary);
+    font-size: 0.8rem;
+}
+
+/*--------------------------------------------------------------------------------- Index */
+/*----------------------------------------------------------- Hero */
+.hero-section {
+    background-image: linear-gradient(180deg, var(--clr-l-grey) 82%, var(--clr-black) 82%);
+}
+
+.hero-section__titles {}
+
+.hero-section__first-title {
+    font-family: var(--ff-text);
+    font-size: var(--fs-subtitle);
+    color: var(--clr-gold);
+    padding-left: 33%;
+    margin-bottom: -7%;
+}
+
+.hero-section__second-title {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-title);
+    color: var(--clr-black);
+}
+
+.hero-section__third-title__wrapper {
+    width: 100%;
+}
+
+.hero-section__third-title {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-subtitle-2);
+    color: var(--clr-red);
+    padding-left: 66%;
+    margin-top: -3%;
+}
+
+
+/*----------------------------------------------------------- Small Gallery */
+.small-gallery {
+    background-color: var(--clr-black);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.gallery__image {
+    margin: 2rem 0;
+    border-radius: 50% 50% 0 0;
+    gap: 3rem;
+    padding: 0 1.5rem;
+}
+
+/*--------------------------------------------------------------------------------- About */
+/*----------------------------------------------------------- Hero section */
+.hero-section--about {
+    padding-top: 5rem;
+}
+
+.hero-section__main-image {
+    border-radius: 50% 50% 0 0;
+}
+
+.hero-section--about__summary {
+    color: var(--clr-black);
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+    padding-left: 25%;
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-top: -3%;
+}
+
+/*----------------------------------------------------------- About section */
+.about-section {
+    background-color: var(--clr-black);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.about-section__text {
+    text-align: start;
+    color: var(--clr-l-grey);
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+    width: 90%;
+    height: auto;
+    padding: 3rem 1rem;
+}
+
+/*--------------------------------------------------------------------------------- My Bookings */
+/*----------------------------------------------------------- Hero section */
+.hero-section--my-bookings {
+    background-color: var(--clr-l-grey);
+    padding-bottom: 7%;
+}
+
+.hero-section__first-title--my_bookings {
+    padding-left: 0;
+}
+
+/*----------------------------------------------------------- Approved */
+.my-bookings__approved {
+    background-color: var(--clr-black);
+    padding: 7rem 0;
+}
+
+.hero-section__second-title--white {
+    color: var(--clr-l-grey);
+}
+
+.card {
+    border: none;
+    background-color: var(--clr-l-grey);
+    width: 25rem;
+    height: 40rem;
+    border-radius: 50% 50% 0 0;
+    margin: 2rem 2rem;
+}
+
+.card-body {
+    margin-bottom: 1rem;
+    color: var(--clr-black);
+}
+
+.card-title {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-text);
+    color: var(--clr-black);
+}
+
+/*----------------------------------------------------------- Pending */
+.my-bookings__pending {
+    background-color: none;
+    padding: 10rem 0;
+}
+
+.card-title--light {
+    color: var(--clr-l-grey);
+}
+
+.card--dark {
+    background-color: var(--clr-black);
+}
+
+.card-body--light {
+    color: var(--clr-l-grey);
+}
+
+.card-text {
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+}
+
+/*--------------------------------------------------------------------------------- Terms */
+.terms__text__wrapper {
+    margin-bottom: 5rem;
+}
+
+.terms__text {
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+    color: var(--clr-black);
+}
+
+.terms__hr {
+    border-top: 3px solid var(--clr-gold);
+}
+
+/*--------------------------------------------------------------------------------- Tattoo Care */
+.tattoo-care__quote {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-subtitle-2);
+    color: var(--clr-black);
+}
+
+.tattoo-care__subtitle {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-text);
+    color: var(--clr-black);
+}
+
+/*--------------------------------------------------------------------------------- Animation */
+.hidden {
+    opacity: 0;
+    filter: blur(7px);
+    transform: translateY(3%);
+    transition:
+        all 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.hiddenX {
+    opacity: 0;
+    filter: blur(7px);
+    transform: translateX(-3%);
+    transition:
+        all 500ms cubic-bezier(.37, 0, .45, .99);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: 
+        translate(0);
+}
+
+.t1_animation {
+    transition-delay: 150ms;
+}
+
+.t2_animation {
+    transition-delay: 250ms;
+}
+
+.t3_animation {
+    transition-delay: 350ms;
+}
+
+.t4_animation {
+    transition-delay: 450ms;
+}
+
+.t5_animation {
+    transition-delay: 550ms;
+}
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+/*--------------------------------------------------------------------------------- Media Queries */
+@media (max-width: 1400px) {
+
+    /*----------------------------------------------------------- Small Gallery */
+    .about-section__text {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /*-----------------------------------------------------------My Bookings */
+    .card {
+        border: none;
+        width: 20rem;
+        height: 35rem;
+        border-radius: 50% 50% 0 0;
+        margin: 2rem 0;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    /*----------------------------------------------------------- Hero Section */
+    .hero-section {
+        background-image: linear-gradient(180deg, var(--clr-l-grey) 70%, var(--clr-black) 70%);
+    }
+
+    .hero-section__first-title {
+        padding-left: 0;
+        margin-bottom: -35%;
+    }
+
+    .hero-section__third-title {
+        padding-left: 0;
+        margin-top: -2%;
+    }
+
+    /*------------------------------------------------------------My Bookings */
+    /*----------------------------------------------------------- Hero section */
+    .hero-section--my-bookings {
+        background-color: var(--clr-l-grey);
+        padding-bottom: 7%;
+    }
+
+    .hero-section__first-title--my_bookings {
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+
+
+}
