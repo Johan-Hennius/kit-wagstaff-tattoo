@@ -17,6 +17,7 @@
 
     /* Font sizes */
     --fs-title: clamp(5rem, 15vw, 16rem);
+    --fs-title-2: clamp(5rem, 12vw, 16rem);
     --fs-subtitle: clamp(3rem, 10vw, 14rem);
     --fs-subtitle-2: clamp(2rem, 7vw, 5rem);
     --fs-text: 1.35rem;
@@ -52,8 +53,8 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
     list-style: none;
 }
 
@@ -146,10 +147,6 @@ ul {
 
 /*----------------------------------------------------------- Buttons */
 /*-------------------------------------- Book button */
-.hero-section__book-button__holder {
-    width: 100%;
-}
-
 .hero-section__book-button__wrapper {
     background-image: url('../images/star-design.svg');
     background-repeat: no-repeat;
@@ -243,9 +240,6 @@ ul {
     padding: 5rem 0;
 }
 
-.about-section__book-button__holder {
-    width: 102%;
-}
 
 /*--------------------------------------------------------------------------------- Forms */
 
@@ -286,6 +280,10 @@ ul {
     background-color: var(--clr-l-grey);
     border-radius: 0;
     border: 3px solid var(--clr-gold);
+}
+
+.modal-content {
+    border-radius: 0;
 }
 
 .modal-title {
@@ -450,6 +448,14 @@ ul {
     padding: 3rem 1rem;
 }
 
+/*--------------------------------------------------------------------------------- Gallery */
+/*----------------------------------------------------------- Hero section */
+.portfolio-hero__title {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-title-2);
+    color: var(--clr-black);
+}
+
 /*--------------------------------------------------------------------------------- My Bookings */
 /*----------------------------------------------------------- Hero section */
 .hero-section--my-bookings {
@@ -493,7 +499,7 @@ ul {
 
 /*----------------------------------------------------------- Pending */
 .my-bookings__pending {
-    background-color: none;
+    background-color: unset;
     padding: 10rem 0;
 }
 
@@ -547,14 +553,6 @@ ul {
     opacity: 0;
     filter: blur(7px);
     transform: translateY(3%);
-    transition:
-        all 500ms cubic-bezier(.37, 0, .45, .99);
-}
-
-.hiddenX {
-    opacity: 0;
-    filter: blur(7px);
-    transform: translateX(-3%);
     transition:
         all 500ms cubic-bezier(.37, 0, .45, .99);
 }
@@ -633,7 +631,6 @@ ul {
     }
 
     /*------------------------------------------------------------My Bookings */
-    /*----------------------------------------------------------- Hero section */
     .hero-section--my-bookings {
         background-color: var(--clr-l-grey);
         padding-bottom: 7%;
@@ -644,6 +641,17 @@ ul {
         margin-bottom: 0;
     }
 
+    /*----------------------------------------------------------- About section */
+    .hero-section--about {
+        padding-top: 0;
+    }
 
+    .about-section__book-button__holder {
+        width: 109%;
+    }
 
+    /*----------------------------------------------------------- Gallery section */
+    .portfolio-hero__title {
+        margin-bottom: 3rem;
+    }
 }
