@@ -105,27 +105,8 @@ These fonts and their main sizes were placed within the `:root` variables to eas
 - As a developer i want to ensure that the project's code is scalable and adheres to current standards so that future additions are fast to implement
   
 ## Wireframes
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-Alternatively, dropdowns are a way to condense several wireframes into a collapsible menu to save space.
-Dropdowns in Markdown are considered some of the only acceptable HTML components that are allowed for assessment purposes.
-
-**IMPORTANT**! **IMPORTANT**! **IMPORTANT**!
-The example below uses the `details` and `summary` code elements.
-However, for these scripts to work, I've had to add spaces within the `< >` elements.
-
-You MUST remove these spaces for it to work properly on your own README/TESTING files.
-Remove the spaces within the `< >` brackets for the `details` and `summary` code elements,
-for the Mobile, Tablet, and Desktop wireframes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I concentrated on designing the wireframes for all pages on desktop first. 
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.  
+I concentrated on designing the wireframes for all pages on desktop first.   
 I then created one wireframe for tablet and one for mobile to provide a guide for placement and spacing. 
 I've used [AdobeXD](https://helpx.adobe.com/xd/get-started.html) to design the site's wireframes.
 
@@ -187,67 +168,63 @@ Tattoo Care
 </details>
 
 ## Features
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### Existing Features
 
-- **Title for feature #1**
+- **Navbar**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The navbar provides the user with an intuitive navigation method for the site. The desktop navbar is fixed to the top of each page to allow users to always be aware of their location on the site and to have easy access to other areas of the site. Depending on the user's logged in state, the navabr changes to allow users to view their bookings. The navbar in mobile and tablet view is initially hidden and only revealed if the user clicks on the burger icon.
 
-![screenshot](documentation/feature01.png)
+![desktop-navbar](documentation/feature-images/desktop-navabr.png)
+![desktop-navbar-logged-out](documentation/feature-images/desktop-navbar-loggedout.png)
+![mobile-tablet-navbar-collapsed](documentation/feature-images/mobile-navbar-collapsed.png)
+![mobile-tablet-navbar](documentation/feature-images/mobile-navbar.png)
 
-- **Title for feature #2**
+- **Booking form**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The booking form filled in by the user to provide all the initial information which is needed to create a booking request for a tattoo. The form is clear and solitary on the page to allow for a concise booking experience.
 
-![screenshot](documentation/feature02.png)
+![desktop-book](documentation/feature-images/book.png)
 
-- **Title for feature #3**
+- **Update booking form**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The update booking form is prepoulated by the user's previous booking information. This will allow the user to clearly identify which sections need to be edited.
 
-![screenshot](documentation/feature03.png)
+![desktop-update-booking](documentation/feature-images/update-booking.png)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **My bookings**
 
-Repeat as necessary for as many features as your site contains.
+    - The "my bookings" page allows the user to view, edit, and delete their bookings. This is their main port of call when managing their approved and pending bookings. 
 
-Hint: the more, the merrier!
+![desktop-my-booking](documentation/feature-images/my-bookings.png)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **Portfolio**
+
+    - The portfolio allows the artist to display their favourite tattoo designs. It also allows the user to browse previous work so that they can decide if the artist is right for them. The portfolio page also offers the user the option to browse the gallery in a carousel view to avoid the scroll.
+
+![desktop-portfolio](documentation/feature-images/portfolio.png)
+![desktop-portfolio-fancyapp](documentation/feature-images/fancyapp.png)
+
+- **Book button**
+
+    - The book button allows the user to jump to the booking form in one click, if they are registered. If the user is not currently registered, the button will direct them to the registration page.
+
+![desktop-book-button](documentation/feature-images/book-button.png)
+
+- **Login and Register**
+
+    - These two pages allow the user to either register or login in order access the booking and my bookins features.
+
+![desktop-register](documentation/feature-images/register.png)
+![desktop-login](documentation/feature-images/login.png)
 
 ### Future Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Title for future feature #1
-    - Any additional notes about this feature.
-- Title for future feature #2
-    - Any additional notes about this feature.
-- Title for future feature #3
-    - Any additional notes about this feature.
+- Artists own management page
+    - Currently the artist manages their bookings and portfolio via the admin panel. The next iteration will include dedicated pages where the artist can access and manage their bookings along with an intuitive method to upload or delete images from the portfolio.
+- Online merch shop
+    - The site will have a merch site where clients can purchase clothing and prints featuring the artist's designs.
+- Flash booking system
+    - The site will have a separate booking page which is specifically for flash designs. Flash designs do not require any design information as they are predesigned. The user will need to specify a location, date, and time. The user will need to pay a 50% deposit upon booking the tattoo.
 
 ## Tools & Technologies Used
 
@@ -264,85 +241,49 @@ Feel free to delete any unused items below as necessary.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
-- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-- [Codeanywhere](https://codeanywhere.com) used as a cloud-based IDE for development.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
 - [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
-- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
 - [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+- [Fancybox](https://fancyapps.com/fancybox/getting-started/) used for the carousel portfolio view.
 
 ## Database Design
 
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Using your defined models (one example below), create an ERD with the relationships identified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+class Booking(models.Model):
+    
+    email_address = models.ForeignKey(User, on_delete=models.CASCADE, related_name="client_name", max_length=100)
+    confirmed_day = models.DateField(null=True, blank=True)
+    confirmed_time = models.TimeField(null=True, blank=True)
+    preferred_day = models.CharField(choices=DAYS)
+    preferred_time = models.CharField(choices=TIME)
+    cover_up = models.CharField(choices=COVER_UP_CHOICES)
+    color_or = models.CharField(choices=COLOR_OR)
+    tattoo_location = models.CharField(max_length=75)
+    tattoo_description = models.TextField()
+    reference_images = CloudinaryField("image", default="placeholder", null=True, blank=True)
+    terms = models.BooleanField(default=True)
+    confirmed = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_on"]
 
     def __str__(self):
-        return self.name
+        return f"This booking is for: {self.email_address} | Requested on: {self.created_on}"
 ```
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-![screenshot](documentation/erd.png)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Using Markdown formatting to represent an example ERD table using the Product model above:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Table: **Product**
-
-    | **PK** | **id** (unique) | Type | Notes |
-    | --- | --- | --- | --- |
-    | **FK** | category | ForeignKey | FK to **Category** model |
-    | | sku | CharField | |
-    | | name | CharField | |
-    | | description | TextField | |
-    | | has_sizes | BooleanField | |
-    | | price | DecimalField | |
-    | | rating | DecimalField | |
-    | | image_url | URLField | |
-    | | image | ImageField | |
+![ERD](documentation/erd/kwt-erd.png)
 
 ## Agile Development Process
 
