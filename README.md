@@ -28,7 +28,7 @@ Understanding the artist's target audience will give us the necessary informatio
 ### Overview  
 I spoke to the artist and gathered as much information as i could about them as a person and as an artist. I then asked them if they had a design in mind for their website. They said that it would be great to base the design off of their gift voucher:
    
-![Image of Kit Wagstaff tattoo voucher](documentation/design-images/kwt-voucher.png)
+![Image of Kit Wagstaff tattoo voucher](documentation/design-images/kwt-voucher.jpg)
    
 The next step was to create user stories with pragmatic success criteria.  
 These user stories were used to create issues which then populated the project's kanban board. 
@@ -44,7 +44,7 @@ The colour scheme was created using the gift voucher as a guide in order to ensu
 - `#A51813` used for primary highlights.
 - `#BD8E3C` used for secondary highlights.
 
-![Image of Kit Wagstaff tattoo voucher](documentation/design-images/kwt-color-scheme.png)
+![Image of Kit Wagstaff tattoo colour scheme](documentation/design-images/kwt-color-scheme-02.png)
   
 This colour scheme was placed within the `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
 
@@ -135,7 +135,7 @@ I've used [AdobeXD](https://helpx.adobe.com/xd/get-started.html) to design the s
 <summary> Click here to see the Mobile Wireframes </summary>
 
 Home
-  - ![home-mobile-view](documentation/design-images/iphone-home.png.png)
+  - ![home-mobile-view](documentation/design-images/iphone-home.png)
 
 </details>
 
@@ -155,10 +155,10 @@ Home
 <summary> Click here to see the Desktop Wireframes </summary>
 
 Home
-  - ![desktop-home](documentation/wireframes/desktop-home.png)
+  - ![desktop-home](documentation/design-images/desktop-home.png)
 
 About
-  - ![desktop-about](documentation/wireframes/desktop-about.png)
+  - ![desktop-about](documentation/design-images/desktop-about.png)
 
 Portfolio
   - ![desktop-portfolio](documentation/design-images/desktop-gallery.png)
