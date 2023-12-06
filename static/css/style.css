@@ -633,7 +633,6 @@ ul {
     }
 
     /*------------------------------------------------------------My Bookings */
-    /*----------------------------------------------------------- Hero section */
     .hero-section--my-bookings {
         background-color: var(--clr-l-grey);
         padding-bottom: 7%;
@@ -644,6 +643,8 @@ ul {
         margin-bottom: 0;
     }
 
-
-
+    /*----------------------------------------------------------- About section */
+    .about-section__book-button__holder {
+        width: 109%;
+    }
 }

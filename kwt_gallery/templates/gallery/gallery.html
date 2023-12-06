@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}Portfolio{% endblock %}
+
 {% block content %}
 
 
 <div class="container-fluid">
     <!--Hero section-->
-    <div class="row hero-section pb-5 pt-2 justify-content-lg-around justify-content-center align-items-center">
+    <section class="row hero-section pb-5 pt-2 justify-content-lg-around justify-content-center align-items-center">
         <div
             class="col-md-11 col-lg-5 d-lg-block d-flex flex-column justify-content-center align-items-center hero-section__titles">
             <div>
@@ -21,7 +23,7 @@
             <img src="{% static 'images/octopus.png' %}" class="img-fluid hero-section__main-image"
                 alt="Black and grey tattoo of a frog sitting on top of a boletus mushroom. Smaller mushrooms surround them.">
         </div>
-    </div>
+    </section>
     <!--Portfolio images-->
     <section class="row justify-content-center align-items-center small-gallery">
         <div class="col-11 d-flex flex-wrap justify-content-around align-items-center gap-2 w-100 t4_animation hidden">
@@ -36,9 +38,9 @@
     <!--Large screen book button-->
     <section
         class="row hero-section__book-button__holder about-section__book-button__holder d-flex justify-content-around py-5">
-        <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
+        <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center t1_animation hidden">
             <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
-                class="hero-section__book-button t1_animation hidden">Book</a>
+                class="hero-section__book-button">Book</a>
         </div>
     </section>
 </div>

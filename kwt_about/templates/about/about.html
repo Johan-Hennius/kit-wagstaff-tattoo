@@ -12,9 +12,9 @@
         <div
             class="col-8 col-md-11 col-lg-5 d-lg-block d-flex flex-column justify-content-center align-items-center hero-section__titles pb-5">
             <div>
-                <h1 class="hero-section__second-title">About</h1>
+                <h1 class="hero-section__second-title hidden">About</h1>
             </div>
-            <div class="hero-section--about__summary d-none d-xl-block">
+            <div class="hero-section--about__summary d-none d-xl-block t1_animation hidden">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi reprehenderit quia placeat
                     officiis voluptas dicta animi soluta distinctio eos esse non error, molestiae incidunt illo sit?
                     Corporis facere nulla tempore fugit minima incidunt et a quis, odio cupiditate commodi ullam autem,
@@ -24,24 +24,20 @@
             </div>
         </div>
         <div class="col-4 col-11 col-lg-5 d-flex justify-content-center align-items-center">
-            <img src="{% static 'images/kit-about-image.png' %}" class="img-fluid hero-section__main-image"
+            <img src="{% static 'images/kit-about-image.png' %}" class="img-fluid hero-section__main-image t2_animation hidden"
                 alt="Photograph of the artist - Kit Wagstaff Tattoo">
         </div>
     </section>
     <!--About section-->
     <section class="row justify-content-around flex-column flex-xl-row align-items-center about-section">
         <div class="col-xl-4 col-10 d-flex justify-content-around align-items-center">
-            <!-- <div class="image__wrapper d-none d-xxl-block">
-            <img src="{% static 'images/dino-tarot-tattoo.png' %}" class="img-fluid gallery__image"
-                alt="Colour tattoo of an earth tarot card containing a Roaring T-Rex with the caption 'when dinosaurs ruled'">
-        </div> -->
             <div class="image__wrapper d-none d-lg-block">
-                <img src="{% static 'images/bodies-are-weird.png' %}" class="img-fluid gallery__image"
+                <img src="{% static 'images/bodies-are-weird.png' %}" class="img-fluid gallery__image t3_animation hidden"
                     alt="Photograph of the artist's workspace with a small flag that states bodies are weird">
             </div>
         </div>
         <div class="col-xl-6 col-10 about-section__text-wrapper">
-            <p class="about-section__text">
+            <p class="about-section__text t4_animation hidden">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi reprehenderit quia placeat
                 officiis voluptas dicta animi soluta distinctio eos esse non error, molestiae incidunt illo sit?
                 Corporis facere nulla tempore fugit minima incidunt et a quis, odio cupiditate commodi ullam autem,
@@ -59,7 +55,7 @@
     <!--Large screen book button-->
     <section
         class="row hero-section__book-button__holder about-section__book-button__holder d-flex justify-content-around py-5">
-        <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
+        <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center t2_animation hidden">
             <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
                 class="hero-section__book-button">Book</a>
         </div>
