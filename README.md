@@ -294,14 +294,6 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a basic screenshot of your Projects Board.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-![screenshot](documentation/gh-projects.png)
-
 ### GitHub Issues
 
 [GitHub Issues](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues) served as an another Agile tool.
@@ -309,19 +301,14 @@ There, I used my own **User Story Template** to manage user stories.
 
 It also helped with milestone iterations on a weekly basis.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a screenshot of your Open and Closed Issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 - [Open Issues](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
+    ![open-issues](documentation/agile-process/open-issues.png)
 
 - [Closed Issues](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+    ![closed-issues](documentation/agile-process/closed-issues.png)
+
 
 ### MoSCoW Prioritization
 
@@ -338,16 +325,6 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-**IMPORTANT:**
-
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 The live deployed application can be found deployed on [Heroku](https://jbh19-kwt-website-6d772e1d0754.herokuapp.com).
 
@@ -488,89 +465,29 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
-### Local VS Deployment
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ## Credits
+- [Kit Wagstaff Tattoo](https://www.instagram.com/kitwagstafftattoo/) provided all the tattoo design images for this site.
+- [Dee MC](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) provided guidance and a variety of code snippets for the models, views, and templates.
+- [Codemy](https://www.youtube.com/playlist?list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy) provided guidance and a variety of code snippets for the models, views, and urls.
+- [Code Institute](https://codeinstitute.net/) provided guidance and a variety of code snippets for the models, views, templates, and urls.
+- [Beyond Fireship](https://www.youtube.com/watch?v=T33NN_pPeNI&list=PLBLcegYJ-WHMZpk3hfEHIva36oZMWZCeX&index=2) provided guidance and code snippets for the scroll reveal animation.
+- [Andy Bell](https://andy-bell.co.uk/a-more-modern-css-reset/) provided code for the css reset used at the start of the style.css file.
+- [Tim Nelson](https://github.com/TravelTimN) provided guidance and code snippets for view functions and entire site.
+- [Chat GPT](https://chat.openai.com/) provided guidance and code snippets for bug hunting and code explanation/refinement.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Content
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [Beyond Fireship](https://www.youtube.com/watch?v=T33NN_pPeNI&list=PLBLcegYJ-WHMZpk3hfEHIva36oZMWZCeX&index=2) | script.js | Scroll reveal animation |
+| [Stack Overflow](https://stackoverflow.com/) | entire site | general advice on most parts of the site |
+| [W3Schools](https://www.w3schools.com/) | entire site | general advice on most parts of the site |
 
-### Media
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-| Source | Location | Type | Notes |
-| --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
 
 ### Acknowledgements
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank my partner Kit, for believing in me, and allowing me to make this transition into software development.
