@@ -127,7 +127,7 @@ header {
 }
 
 main {
-    padding-top: 5rem;
+    padding-top: 1rem;
 }
 
 header {
@@ -143,7 +143,9 @@ ul {
     padding-left: 0;
 }
 
-
+.alert__margin {
+    margin-top: 3rem;
+}
 
 /*----------------------------------------------------------- Buttons */
 /*-------------------------------------- Book button */
@@ -614,10 +616,24 @@ ul {
 }
 
 @media (max-width: 992px) {
+    /*----------------------------------------------------------- General */
+    main {
+        padding-top: 5rem;
+    }
+
+    .alert__margin {
+        margin-top: 5rem;
+    }
+
+    /*----------------------------------------------------------- Register/login/logout */
+    .registration__title {
+        margin: 2rem 0;
+    }
 
     /*----------------------------------------------------------- Hero Section */
     .hero-section {
         background-image: linear-gradient(180deg, var(--clr-l-grey) 70%, var(--clr-black) 70%);
+        padding-top: 2rem;
     }
 
     .hero-section__first-title {
@@ -636,6 +652,10 @@ ul {
         padding-bottom: 7%;
     }
 
+    .hero-section__titles--my-bookings {
+        margin: 1rem 0;
+    }
+
     .hero-section__first-title--my_bookings {
         padding-left: 0;
         margin-bottom: 0;
@@ -643,7 +663,7 @@ ul {
 
     /*----------------------------------------------------------- About section */
     .hero-section--about {
-        padding-top: 0;
+        padding-top: 2rem;
     }
 
     /*----------------------------------------------------------- Gallery section */
