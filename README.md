@@ -1,38 +1,12 @@
-# Kit Wagstaff Tattoo Website
+# [Kit Wagstaff Tattoo Website](https://jbh19-kwt-website-6d772e1d0754.herokuapp.com)
 ### Full-Stack capstone project.  Created during the Code Institute Full-Stack developer bootcamp.  
-
-# [KIT WAGSTAFF TATTOO](https://jbh19-kwt-website-6d772e1d0754.herokuapp.com)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
-
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
-
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://jbh19-kwt-website-6d772e1d0754.herokuapp.com
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-![screenshot](documentation/mockup.png)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
+  
+  
+![Images of Kit Wagstaff tattoo website](documentation/design-images/kwt-responsive-views-01.png)
+  
+  
 ## UX
-A local tattoo artist recently approached me and asked if i could design and build a website for them. I asked them what they wanted the website to be - was it to be a portfolio site or more of a shop?  
+A local tattoo artist "Kit Wagstaff" recently approached me and asked if i could design and build a website for them. I asked them what they wanted the website to be - was it to be a portfolio site or more of a shop?  
 They replied with a story:  
 Many tattoo artists and their customers use instagram as a platform to communicate. Instagram is used to contact artists, book appointments, send reference images and so on. This method presents many issues surrounding time. Time spent looking for previous images, time spent copying and pasting terms & conditions, time spent asking the same questions over and over again. This time should be used to design tattoos, learn techniques and improve the craft.  
 The artist said that this site needs to include a booking service where clients can request a booking that contains all the necessary information for the artist to assign an appointment and get started with their design work.  
@@ -41,6 +15,14 @@ The aim of this system is not completely remove the human-aspect of the tattoo b
 The artist also requested that a portfolio page should be included which shows the client a variety of the artist's designs, with the most recent being displayed first.  
 The remaining pages would be dedicated to; about the artist, terms & conditions, and tattoo care.  
 
+We began the development process by identifying the artist's target audience:  
+   
+- 20 to 35 year old female
+- Student or Professional
+- Alternative style 
+- Climate concious and LGBTQ+ supporter
+
+Understanding the artist's target audience will give us the necessary information to create user stories which will ultimately dictate the site's design and features.
 
 
 
