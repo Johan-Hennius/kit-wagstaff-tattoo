@@ -19,7 +19,8 @@
             </div>
         </div>
         <div class="col-4 col-11 col-lg-5 d-flex justify-content-center align-items-center">
-            <img src="{% static 'images/kit-about-image.png' %}" class="img-fluid hero-section__main-image t2_animation hidden"
+            <img src="{% static 'images/kit-about-image.png' %}"
+                class="img-fluid hero-section__main-image t2_animation hidden"
                 alt="Photograph of the artist - Kit Wagstaff Tattoo">
         </div>
     </section>
@@ -27,30 +28,32 @@
     <section class="row justify-content-around flex-column flex-xl-row align-items-center about-section">
         <div class="col-xl-4 col-10 d-flex justify-content-around align-items-center">
             <div class="image__wrapper d-none d-lg-block">
-                <img src="{% static 'images/bodies-are-weird.png' %}" class="img-fluid gallery__image t3_animation hidden"
+                <img src="{% static 'images/bodies-are-weird.png' %}"
+                    class="img-fluid gallery__image t3_animation hidden"
                     alt="Photograph of the artist's workspace with a small flag that states bodies are weird">
             </div>
         </div>
         <div class="col-xl-6 col-10 about-section__text-wrapper">
             <p class="about-section__text t4_animation hidden">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi reprehenderit quia placeat
-                officiis voluptas dicta animi soluta distinctio eos esse non error, molestiae incidunt illo sit?
-                Corporis facere nulla tempore fugit minima incidunt et a quis, odio cupiditate commodi ullam autem,
-                tempora soluta exercitationem accusantium illum cum? Laborum error ipsa, suscipit laboriosam
-                voluptate, earum reprehenderit minus explicabo veritatis est corrupti voluptatibus odio quibusdam
-                odit quos sequi laudantium voluptatem delectus! Omnis adipisci quisquam accusamus exercitationem
-                recusandae illo! Aut quod magnam impedit fuga reiciendis deserunt, numquam cum in at? Recusandae,
-                debitis neque cupiditate hic quisquam perferendis sequi ducimus minima omnis sapiente repellat
-                veritatis non maiores, culpa facilis beatae quidem rem, temporibus error enim soluta. Amet cumque
-                distinctio labore iure repudiandae, facilis ullam facere saepe eveniet, numquam quasi possimus.
-                Voluptas eos rem tempora tempore delectus rerum exercitationem, distinctio inventore iusto, neque
-                facere alias eius vero, quae dolore maxime. In ut libero iusto.</p>
+                Kit Wagstaff has worked as a professional tattoo artist for 3 years. She is currently tattooing at
+                Inkabella Tattoo Studio in Barry, South Glamorgan.
+                <br>
+                When it comes to style, Kit enjoys detailed, illustrative tattoos with stipple shading and a side of
+                traditional/blackwork.
+                <br>
+                Kit doesn't just create tattoos; she devotes her life to the craft. Constantly creating new designs and
+                developing her techniques.
+                <br>
+                If you're looking for a skilled tattoo artist who puts her clients first, then you have come to the
+                right place. Everyone is welcome.
+            </p>
         </div>
     </section>
     <!--Large screen book button-->
     <section
         class="row hero-section__book-button__holder about-section__book-button__holder d-flex justify-content-around py-5">
-        <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center t2_animation hidden">
+        <div
+            class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center t2_animation hidden">
             <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
                 class="hero-section__book-button">Book</a>
         </div>
