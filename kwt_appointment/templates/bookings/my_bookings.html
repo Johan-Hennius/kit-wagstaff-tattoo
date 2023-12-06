@@ -90,7 +90,7 @@
                     <div
                         class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-3">
                         <a href="{% url 'update_booking' booking.id %}" class="btn__rectangle text-center">Edit</a>
-                        <button class="btn__rectangle" data-bs-toggle="modal"
+                        <button class="btn__rectangle btn__rectangle--delete" data-bs-toggle="modal"
                             data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                             This action cannot be undone.
                         </div>
                         <div class="modal-footer d-flex flex-column justify-content-center align-items-center gap-4">
-                            <a href="{% url 'delete_booking' booking.id %}" class="btn__rectangle">Delete</a>
+                            <a href="{% url 'delete_booking' booking.id %}" class="btn__rectangle btn__rectangle--delete">Delete</a>
                             <button type="button" class="btn__rectangle" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
