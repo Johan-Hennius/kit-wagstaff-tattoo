@@ -50,7 +50,7 @@
                     <button data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
                 </li>
             </ul>
-            <ul class="navbar-nav justify-content-center align-items-center mt-lg-0 mt-3" id="navbarNav" role="list">
+            <ul class="navbar-nav justify-content-center align-items-center mt-lg-0 mt-3" role="list">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link nav__logout {% if url_name == 'accounts_logout' %}active" aria-current="page{% endif %}"
