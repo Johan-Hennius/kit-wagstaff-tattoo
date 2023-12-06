@@ -564,14 +564,6 @@ ul {
         all 500ms cubic-bezier(.37, 0, .45, .99);
 }
 
-.hiddenX {
-    opacity: 0;
-    filter: blur(7px);
-    transform: translateX(-3%);
-    transition:
-        all 500ms cubic-bezier(.37, 0, .45, .99);
-}
-
 .show {
     opacity: 1;
     filter: blur(0);
