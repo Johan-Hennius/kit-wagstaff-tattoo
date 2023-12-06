@@ -597,7 +597,6 @@ ul {
 
     /*----------------------------------------------------------- Small Gallery */
     .about-section__text {
-        text-align: center;
         width: 100%;
     }
 }
@@ -664,6 +663,10 @@ ul {
     /*----------------------------------------------------------- About section */
     .hero-section--about {
         padding-top: 2rem;
+    }
+
+    .about-section__text {
+        text-align: center;
     }
 
     /*----------------------------------------------------------- Gallery section */
