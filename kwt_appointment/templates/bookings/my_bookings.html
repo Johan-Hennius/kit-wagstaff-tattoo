@@ -78,7 +78,7 @@
             <h2 class="hero-section__second-title text-center t3_animation hidden">Pending</h2>
         </div>
         <div class="col-10 d-flex d-flex-column flex-xl-row flex-wrap justify-content-around align-items-center">
-            <!--Approved Booking info-->
+            <!--Pending Booking info-->
             {% for booking in pending_bookings %}
             <div class="card card--dark t4_animation hidden">
                 <div class="card-body card-body--light d-flex flex-column justify-content-end align-items-center">
@@ -103,11 +103,11 @@
                             <h5 class="modal-title" id="deleteModalLabel">Delete booking?</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body text-center">
                             Are you sure you want to delete your booking?
                             This action cannot be undone.
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer d-flex flex-column justify-content-center align-items-center gap-4">
                             <a href="{% url 'delete_booking' booking.id %}" class="btn__rectangle">Delete</a>
                             <button type="button" class="btn__rectangle" data-bs-dismiss="modal">Close</button>
                         </div>
