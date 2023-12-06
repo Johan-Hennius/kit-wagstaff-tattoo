@@ -12,33 +12,33 @@
         <div
             class="col-md-11 col-lg-5 d-lg-block d-flex flex-column justify-content-center align-items-center hero-section__titles">
             <div>
-                <h1 class="hero-section__first-title">Kit</h1>
+                <h1 class="hero-section__first-title t1_animation hidden">Kit</h1>
             </div>
             <div>
-                <h2 class="hero-section__second-title">Wagstaff</h2>
+                <h2 class="hero-section__second-title t2_animation hidden">Wagstaff</h2>
             </div>
             <div class="hero-section__third-title__wrapper d-lg-block d-flex align-items-center justify-content-center">
-                <h3 class="hero-section__third-title">Tattoo</h3>
+                <h3 class="hero-section__third-title t3_animation hidden">Tattoo</h3>
             </div>
         </div>
         <!--Medium screen book button-->
-        <div class="hero-section__book-button__holder d-flex justify-content-center d-lg-none my-3">
+        <div class="hero-section__book-button__holder d-flex justify-content-center d-lg-none my-3 t4_animation hidden">
             <div class="hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
                 <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
-                    class="hero-section__book-button">Book</a>
+                    class="hero-section__book-button ">Book</a>
             </div>
         </div>
         <!--Hero section illustration-->
         <div
-            class="col-11 col-lg-5 d-flex justify-content-center align-items-center justify-content-lg-end align-items-lg-end">
+            class="col-11 col-lg-5 d-flex justify-content-center align-items-center justify-content-lg-end align-items-lg-end t3_animation hidden">
             <img src="{% static 'images/female-illustration.png' %}" class="img-fluid"
                 alt="Illustration of female with flowing auburn hair. Her head is frame by five golden stars. Chrysanthemum tattoo on her neck and a gold crescent moon by her collar bones.">
         </div>
         <!--Large screen book button-->
-        <div class="hero-section__book-button__holder d-flex justify-content-center d-lg-flex d-none">
+        <div class="hero-section__book-button__holder d-flex justify-content-center d-lg-flex d-none t4_animation hidden">
             <div class="hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
                 <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
-                    class="hero-section__book-button">Book</a>
+                    class="hero-section__book-button ">Book</a>
             </div>
         </div>
     </section>
@@ -46,23 +46,23 @@
     <!--Small gallery-->
     <section class="row justify-content-center align-items-center small-gallery">
         <div class="col-11 d-flex flex-column flex-lg-row justify-content-around align-items-center gap-2 w-100">
-            <div class="image__wrapper d-block d-lg-none">
+            <div class="image__wrapper d-block d-lg-none t1_animation hidden">
                 <img src="{% static 'images/kit-image-1.png' %}" class="gallery__image img-fluid"
                     alt="Photograph of the artist - Kit Wagstaff">
             </div>
-            <div class="image__wrapper">
+            <div class="image__wrapper t2_animation hidden">
                 <img src="{% static 'images/dino-tarot-tattoo.png' %}" class="gallery__image img-fluid"
                     alt="Colour tattoo of an earth tarot card containing a Roaring T-Rex with the caption 'when dinosaurs ruled'">
             </div>
-            <div class="image__wrapper d-none d-lg-block">
+            <div class="image__wrapper d-none d-lg-block t3_animation hidden">
                 <img src="{% static 'images/kit-image-1.png' %}" class="gallery__image img-fluid"
                     alt="Photograph of the artist - Kit Wagstaff">
             </div>
-            <div class="image__wrapper">
+            <div class="image__wrapper t4_animation hidden">
                 <img src="{% static 'images/boar-tattoo.png' %}" class="gallery__image img-fluid"
                     alt="Black and Grey tattoo of a boar surrounded by mushrooms, nettles, and flowers. A dagger with a celtic pattern sits in its head">
             </div>
-            <div class="image__wrapper">
+            <div class="image__wrapper t5_animation hidden">
                 <img src="{% static 'images/t-rex-forearm-tattoo.png' %}" class="gallery__image img-fluid"
                     alt="Colour tatto of a T-Rex roaring with flowers underneath">
             </div>
@@ -72,8 +72,8 @@
     <!--About and contact buttons-->
     <section class="row d-flex justify-content-center align-items-center button__section">
         <div class="col-10 d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
-            <a class="btn__rectangle" href="{% url 'about_kwt' %}">About</a>
-            <button class="btn__rectangle" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+            <a class="btn__rectangle t1_animation hidden" href="{% url 'about_kwt' %}">About</a>
+            <button class="btn__rectangle t2_animation hidden" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
         </div>
     </section>
 
