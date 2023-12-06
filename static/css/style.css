@@ -289,6 +289,10 @@ ul {
     border: 3px solid var(--clr-gold);
 }
 
+.modal-content {
+    border-radius: 0;
+}
+
 .modal-title {
     font-family: var(--ff-secondary);
     color: var(--clr-black);
