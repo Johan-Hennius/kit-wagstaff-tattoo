@@ -147,10 +147,6 @@ ul {
 
 /*----------------------------------------------------------- Buttons */
 /*-------------------------------------- Book button */
-.hero-section__book-button__holder {
-    width: 100%;
-}
-
 .hero-section__book-button__wrapper {
     background-image: url('../images/star-design.svg');
     background-repeat: no-repeat;
@@ -244,9 +240,6 @@ ul {
     padding: 5rem 0;
 }
 
-.about-section__book-button__holder {
-    width: 102%;
-}
 
 /*--------------------------------------------------------------------------------- Forms */
 
