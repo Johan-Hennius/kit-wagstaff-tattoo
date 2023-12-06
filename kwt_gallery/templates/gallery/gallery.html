@@ -10,28 +10,23 @@
         <div
             class="col-md-11 col-lg-5 d-lg-block d-flex flex-column justify-content-center align-items-center hero-section__titles">
             <div>
-                <h1 class="hero-section__second-title">Portfolio</h1>
+                <h1 class="hero-section__second-title hidden">Portfolio</h1>
             </div>
-            <div class="hero-section--about__summary d-none d-xl-block">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi reprehenderit quia placeat
-                    officiis voluptas dicta animi soluta distinctio eos esse non error, molestiae incidunt illo sit?
-                    Corporis facere nulla tempore fugit minima incidunt et a quis, odio cupiditate commodi ullam autem,
-                    tempora soluta exercitationem accusantium illum cum? Laborum error ipsa, suscipit laboriosam
-                    voluptate, earum reprehenderit minus explicabo veritatis est corrupti voluptatibus odio quibusdam
-                    odit quos sequi laudantium voluptatem delectus!</p>
+            <div class="hero-section--about__summary d-none d-xl-block t1_animation hidden">
+                <p>A selection of my favourite tattoos.</p>
             </div>
         </div>
         <div
-            class="col-11 col-lg-5 d-flex justify-content-center align-items-center justify-content-lg-end align-items-lg-end">
+            class="col-11 col-lg-5 d-flex justify-content-center align-items-center justify-content-lg-end align-items-lg-end t3_animation hidden">
             <img src="{% static 'images/octopus.png' %}" class="img-fluid hero-section__main-image"
                 alt="Black and grey tattoo of a frog sitting on top of a boletus mushroom. Smaller mushrooms surround them.">
         </div>
     </div>
     <!--Portfolio images-->
     <section class="row justify-content-center align-items-center small-gallery">
-        <div class="col-11 d-flex flex-wrap justify-content-around align-items-center gap-2 w-100">
+        <div class="col-11 d-flex flex-wrap justify-content-around align-items-center gap-2 w-100 t4_animation hidden">
             {% for image in images %}
-            <div class="image__wrapper" data-src="{{ image.gallery_image.url }}" data-fancybox="gallery"
+            <div class="image__wrapper t1_animation hidden" data-src="{{ image.gallery_image.url }}" data-fancybox="gallery"
                 data-caption="{{ image.caption }}">
                 <img src="{{ image.gallery_image.url }}" class="gallery__image img-fluid" alt="{{ image.caption }}">
             </div>
@@ -43,7 +38,7 @@
         class="row hero-section__book-button__holder about-section__book-button__holder d-flex justify-content-around py-5">
         <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center">
             <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
-                class="hero-section__book-button">Book</a>
+                class="hero-section__book-button t1_animation hidden">Book</a>
         </div>
     </section>
 </div>

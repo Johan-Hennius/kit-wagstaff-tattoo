@@ -12,10 +12,10 @@
         <div
             class="col-10 d-flex flex-column justify-content-center align-items-center hero-section__titles mb-5">
             <div class="mb-lg-4 mb-md-2">
-                <h1 class="hero-section__first-title hero-section__first-title--my_bookings">My</h1>
+                <h1 class="hero-section__first-title hero-section__first-title--my_bookings hidden">My</h1>
             </div>
             <div>
-                <h2 class="hero-section__second-title">Bookings</h2>
+                <h2 class="hero-section__second-title t1_animation hidden">Bookings</h2>
             </div>
         </div>
     </section>
@@ -24,12 +24,12 @@
     <section class="row my-bookings__approved justify-content-center align-items-center">
         <!--Approved booking title-->
         <div class="col-10 d-flex justify-content-center align-items-center mb-5">
-            <h2 class="hero-section__second-title hero-section__second-title--white text-center">Approved</h2>
+            <h2 class="hero-section__second-title hero-section__second-title--white text-center t3_animation hidden">Approved</h2>
         </div>
         <div class="col-10 d-flex d-flex-column flex-xl-row flex-wrap justify-content-around align-items-center">
             <!--Approved Booking info-->
             {% for booking in approved_bookings %}
-            <div class="card">
+            <div class="card t4_animation hidden">
                 <div class="card-body d-flex flex-column justify-content-end align-items-center">
                     <h5 class="card-title text-center">Confirmed date:</h5>
                     <p class="card-text text-center">{{ booking.confirmed_day}}</p>
@@ -75,12 +75,12 @@
     <section class="row my-bookings__pending justify-content-center align-items-center">
         <!--Pending booking title-->
         <div class="col-10 d-flex justify-content-center align-items-center mb-5">
-            <h2 class="hero-section__second-title text-center">Pending</h2>
+            <h2 class="hero-section__second-title text-center t3_animation hidden">Pending</h2>
         </div>
         <div class="col-10 d-flex d-flex-column flex-xl-row flex-wrap justify-content-around align-items-center">
             <!--Approved Booking info-->
             {% for booking in pending_bookings %}
-            <div class="card card--dark">
+            <div class="card card--dark t4_animation hidden">
                 <div class="card-body card-body--light d-flex flex-column justify-content-end align-items-center">
                     <h5 class="card-title card-title--light text-center">Requested date:</h5>
                     <p class="card-text text-center">{{ booking.preferred_day}}</p>
@@ -121,7 +121,7 @@
     <!--About and contact buttons-->
     <section class="row d-flex justify-content-center align-items-center button__section">
         <div class="col-10 d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
-            <button class="btn__rectangle" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+            <button class="btn__rectangle t1_animation hidden" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
         </div>
     </section>
 </div>
