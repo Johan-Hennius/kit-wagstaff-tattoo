@@ -17,6 +17,7 @@
 
     /* Font sizes */
     --fs-title: clamp(5rem, 15vw, 16rem);
+    --fs-title-2: clamp(5rem, 12vw, 16rem);
     --fs-subtitle: clamp(3rem, 10vw, 14rem);
     --fs-subtitle-2: clamp(2rem, 7vw, 5rem);
     --fs-text: 1.35rem;
@@ -448,6 +449,14 @@ ul {
     width: 90%;
     height: auto;
     padding: 3rem 1rem;
+}
+
+/*--------------------------------------------------------------------------------- Gallery */
+/*----------------------------------------------------------- Hero section */
+.portfolio-hero__title {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-title-2);
+    color: var(--clr-black);
 }
 
 /*--------------------------------------------------------------------------------- My Bookings */
