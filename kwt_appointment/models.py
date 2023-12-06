@@ -37,7 +37,7 @@ class Booking(models.Model):
     color_or = models.CharField(choices=COLOR_OR)
     tattoo_location = models.CharField(max_length=75)
     tattoo_description = models.TextField()
-    reference_images = CloudinaryField("image", default="placeholder")
+    reference_images = CloudinaryField("image", default="placeholder", null=True, blank=True)
     terms = models.BooleanField(default=True)
     confirmed = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
