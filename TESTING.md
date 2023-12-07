@@ -28,7 +28,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css-validation/css-w3c.png) | Numerous errors from Bootstrap & errors for scale & aspect ratio properties - checked w3schools - these properties are used. Fixed font family error |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css-validation/css-w3c.png) | Numerous errors from Bootstrap |
 
 ### JavaScript
 
