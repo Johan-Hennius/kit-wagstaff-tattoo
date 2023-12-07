@@ -490,10 +490,7 @@ ul {
 /*----------------------------------------------------------- Pending */
 .my-bookings__pending {
     background-color: unset;
-}
-
-.pending__title {
-    padding-top: 7rem;
+    padding: 7rem 0;
 }
 
 .card-title--light {
