@@ -199,31 +199,31 @@ During the development process, i did not take screenshots of the bugs that aros
 
     - To fix this, i stated in the view that the booking.terms = True when saved. On the template page i put a separate required terms & conditions form-check which the user had to check to submit.
     ``` Python view 
-    if request.method == "POST":
-        form = BookingForm(
-            request.POST or None,
-            request.FILES,
-            instance=booking
-        )
-        if form.is_valid():
-            booking = form.save(commit=False)
-            booking.confirmed = False
-            booking.terms = True
-            form.save()
-            messages.success(request, "Booking updated and awaiting approval")
-            return redirect(reverse("my_bookings"))
-        messages.error(request, "An error occured, please try again!")
-    else:
-        form = BookingForm(instance=booking)
+        if request.method == "POST":
+            form = BookingForm(
+                request.POST or None,
+                request.FILES,
+                instance=booking
+            )
+            if form.is_valid():
+                booking = form.save(commit=False)
+                booking.confirmed = False
+                booking.terms = True
+                form.save()
+                messages.success(request, "Booking updated and awaiting approval")
+                return redirect(reverse("my_bookings"))
+            messages.error(request, "An error occured, please try again!")
+        else:
+            form = BookingForm(instance=booking)
     ```
 
     ``` HTML form
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
-        <label class="form-check-label" for="termsCheck">
-            I have read and agreed to the <a href="{% url 'terms' %}">Terms and Conditions</a>
-        </label>
-    </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+            <label class="form-check-label" for="termsCheck">
+                I have read and agreed to the <a href="{% url 'terms' %}">Terms and Conditions</a>
+            </label>
+        </div>
     ```
 
 - CSS: H1 being cut off on mobile devices. The heading element on every page was cut off, showing only half of the heading.
