@@ -16,7 +16,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Book | n/a | ![screenshot](documentation/html-validation/book-w3c.png) | 2 sections lack header h2-h6 warning & action empty on form - left empty to avoid breaking Django setup |
 | Update Booking | n/a | ![screenshot](documentation/html-validation/update-booking-w3c.png) | 1 section lack1 header h2-h6 warning & trailing slash on Django form |
 | My Bookings | n/a | ![screenshot](documentation/html-validation/my-bookings-w3c.png) | 2 sections lack header h2-h6 warning & duplicate ID - fixed |
-| Tattoo Care | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Fmisc%2Ftattoo-care%2F) | ![screenshot](documentation/html-validation/tattoo-care-w3c.png) | 1 section lack header h2-h6 warning & a few other errors - checked HTML file - could not find errors |
+| Tattoo Care | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Fmisc%2Ftattoo-care%2F) | ![screenshot](documentation/html-validation/tattoo-care-w3c.png) | 1 section lack header h2-h6 warning & a few other errors - checked HTML file - fixed |
 | Terms | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Fmisc%2Fterms%2F) | ![screenshot](documentation/html-validation/terms-w3c.png) | 2 sections lack header h2-h6 warning |
 | Logout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Faccounts%2Flogout%2F) | ![screenshot](documentation/html-validation/logout-w3c.png) | 3 sections lack header h2-h6 warning |
 | Register | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/html-validation/register.w3c.png) | 1 section lacks header h2-h6 warning |
@@ -28,7 +28,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css-validation/css-w3c.png) | Numerous errors from Bootstrap |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css-validation/css-w3c.png) | Numerous errors from Bootstrap and personal code - fixed personal code |
 
 ### JavaScript
 
