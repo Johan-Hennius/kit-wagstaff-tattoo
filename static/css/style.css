@@ -154,9 +154,9 @@ ul {
     background-repeat: no-repeat;
     background-position: center center;
     width: clamp(11rem, 20vw, 19rem);
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     transition:
-        scale 500ms cubic-bezier(.37, 0, .45, .99);
+        all 500ms cubic-bezier(.37, 0, .45, .99);
 }
 
 .hero-section__book-button {
@@ -166,13 +166,12 @@ ul {
     color: var(--clr-l-grey);
     text-decoration: none;
     transition:
-        scale 500ms cubic-bezier(.37, 0, .45, .99),
-        color 500ms cubic-bezier(.37, 0, .45, .99);
+        all 500ms cubic-bezier(.37, 0, .45, .99);
 }
 
 .hero-section__book-button__wrapper:hover,
 .hero-section__book-button__wrapper:hover .hero-section__book-button {
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 .hero-section__book-button:hover {
@@ -193,13 +192,12 @@ ul {
     border: none;
     text-decoration: none;
     transition:
-        scale 500ms cubic-bezier(.37, 0, .45, .99),
-        color 500ms cubic-bezier(.37, 0, .45, .99);
+        all 500ms cubic-bezier(.37, 0, .45, .99);
 }
 
 .btn__rectangle:hover,
 .btn__rectangle--small:hover {
-    scale: 1.1;
+    transform: scale(1.1);
     color: var(--clr-black);
 }
 
@@ -217,15 +215,12 @@ ul {
     text-decoration: none;
     margin: 1rem 2rem;
     transition:
-        scale 500ms cubic-bezier(.37, 0, .45, .99),
-        color 500ms cubic-bezier(.37, 0, .45, .99);
+        all 500ms cubic-bezier(.37, 0, .45, .99);
 }
 
 .btn__rectangle--delete {
     transition:
-        scale 500ms cubic-bezier(.37, 0, .45, .99),
-        color 500ms cubic-bezier(.37, 0, .45, .99),
-        background-color 500ms cubic-bezier(.37, 0, .45, .99);
+        all 500ms cubic-bezier(.37, 0, .45, .99);
 }
 
 .btn__rectangle--delete:hover {

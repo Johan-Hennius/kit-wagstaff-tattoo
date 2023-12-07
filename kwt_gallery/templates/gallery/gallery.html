@@ -38,7 +38,7 @@
     <!--Large screen book button-->
     <section
         class="row hero-section__book-button__holder about-section__book-button__holder d-flex justify-content-around py-5">
-        <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center t1_animation hidden">
+        <div class="col-10 hero-section__book-button__wrapper d-flex justify-content-center align-items-center hidden">
             <a href="{% if user.is_authenticated %}{% url 'booking_form' %}{% else %}{% url 'account_signup' %}{% endif %}"
                 class="hero-section__book-button">Book</a>
         </div>
