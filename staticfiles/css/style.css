@@ -354,8 +354,6 @@ ul {
 }
 
 /*----------------------------------------------------------- Footer */
-.footer__wrapper {}
-
 .footer__list a,
 .footer__info p,
 .footer__info a {
@@ -370,8 +368,6 @@ ul {
 .hero-section {
     background-image: linear-gradient(180deg, var(--clr-l-grey) 82%, var(--clr-black) 82%);
 }
-
-.hero-section__titles {}
 
 .hero-section__first-title {
     font-family: var(--ff-text);
