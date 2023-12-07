@@ -42,92 +42,33 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 ### Python
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-The CI Python Linter can be used two different ways.
-- Copy/Paste your Python code directly into the linter.
-- As an API, using the "raw" URL appended to the linter URL.
-    - To find the "raw" URL, navigate to your file directly on the GitHub repo.
-    - On that page, GitHub provides a button on the right called "Raw" that you can click on.
-    - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
-    - Check the example table below for a live demo.
-
-It's recommended to validate each file using the API URL.
-This will give you a custom URL which you can use on your testing documentation.
-It makes it easier to return back to a file to validate it again in the future.
-Use the steps above to generate your own custom URLs for each Python file.
-
-**IMPORTANT**: `E501 line too long` errors
-
-You must strive to fix any Python lines that are too long ( >80 characters ).
-In rare cases where you cannot break the lines [without breaking the functionality],
-then by adding `# noqa` to the end of those lines will ignore linting validation.
-
-`# noqa` = **NO Quality Assurance**
-
-**NOTE**: You must include 2 *spaces* before the `#`, and 1 *space* after the `#`.
-
-Do not use `# noqa` all over your project just to clear down validation errors!
-This can still cause a project to fail, for failing to fix actual PEP8 validation errors.
-
-Sometimes strings or variables get too long, or long `if` conditional statements.
-These are acceptable instances to use the `# noqa`.
-
-When trying to fix "line too long" errors, try to avoid using `/` to split lines.
-A better approach would be to use any type of opening bracket, and hit Enter just after that.
-
-Any opening bracket type will work: `(`, `[`, `{`.
-
-By using an opening bracket, Python knows where to appropriately indent the next line of code,
-without having to "guess" yourself and attempt to tab to the correct indentation level.
-
-Sample Python code validation documentation below (tables are extremely helpful!).
-
-**Note**: This gives examples of PP3 (Python-only), and Flask/Django files, so eliminate the ones not applicable to your own project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| run.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/run.py) | ![screenshot](documentation/py-validation-run.png) | W291 trailing whitespace |
-| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/boutique-ado/settings.py) | ![screenshot](documentation/py-validation-settings.png) | E501 line too long |
-| Blog views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/blog/views.py) | ![screenshot](documentation/py-validation-blog-views.png) | Pass: No Errors |
-| Checkout urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/checkout/urls.py) | ![screenshot](documentation/py-validation-checkout-urls.png) | W292 no newline at end of file |
-| Profiles models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/profiles/models.py) | ![screenshot](documentation/py-validation-profiles-models.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining Python files |
+| manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/manage.py) | ![screenshot](documentation/python-validation/python-val-1.png) | E501 lines too long - fixed |
+| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kit_wagstaff_tattoo/settings.py#) | ![screenshot](documentation/python-validation/python-val-2.png) | Numerous errors - fixed |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kit_wagstaff_tattoo/urls.py) | ![screenshot](documentation/python-validation/python-val-3.png) | Traliing white space - fixed |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_about/urls.py#) | ![screenshot](documentation/python-validation/python-val-4.png) | No new line at end of file - fixed |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_about/views.py#) | ![screenshot](documentation/python-validation/python-val-5.png) | Numerous errors - fixed |
+| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_appointment/admin.py#) | ![screenshot](documentation/python-validation/python-val-6.png) | Numerous errors - fixed |
+| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_appointment/forms.py) | ![screenshot](documentation/python-validation/python-val-7.png) | Numerous errors - fixed |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_appointment/models.py) | ![screenshot](documentation/python-validation/python-val-8.png) | Numerous errors - fixed |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_appointment/urls.py) | ![screenshot](documentation/python-validation/python-val-9.png) | Numerous errors - fixed |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_appointment/views.py) | ![screenshot](documentation/python-validation/python-val-10.png) | Numerous errors - fixed |
+| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_gallery/admin.py) | ![screenshot](documentation/python-validation/python-val-11.png) | No errors |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_gallery/models.py#) | ![screenshot](documentation/python-validation/python-val-12.png) | Numerous errors - fixed |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_gallery/urls.py) | ![screenshot](documentation/python-validation/python-val-13.png) | No new line at end - fixed |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_gallery/views.py) | ![screenshot](documentation/python-validation/python-val-14.png) | Numerous errors - fixed |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_home/urls.py) | ![screenshot](documentation/python-validation/python-val-15.png) | No new line at end - fixed |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_home/views.py) | ![screenshot](documentation/python-validation/python-val-16.png) | Couple of errors - fixed |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_misc/urls.py) | ![screenshot](documentation/python-validation/python-val-17.png) | No new line at end - fixed |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_misc/views.py) | ![screenshot](documentation/python-validation/python-val-18.png) | No new line at end - fixed |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_users/urls.py) | ![screenshot](documentation/python-validation/python-val-19.png) | No new line at end - fixed |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Johan-Hennius/kit-wagstaff-tattoo/main/kwt_users/views.py) | ![screenshot](documentation/python-validation/python-val-20.png) | Couple of errors - fixed |
 
-**IMPORTANT**: Django settings.py
 
-The Django settings.py file comes with 4 lines that are quite long, and will throw the `E501 line too long` error.
-This is default behavior, but can be fixed by adding `# noqa` to the end of those lines.
-
-Example:
-
-```python
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
-    },
-]
-```
-
-**IMPORTANT**: migration and pycache files
-
-You do not have to ever validate files from the `migrations/` or `pycache/` folders!
-Ignore these `.py` files, and validate just the files that you've created or modified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+![Alt text](image.png)
 
 ## Browser Compatibility
 

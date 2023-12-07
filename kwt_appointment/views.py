@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 
-from django.views.generic import CreateView, ListView, DetailView, DeleteView, UpdateView
+from django.views.generic import CreateView, ListView, DetailView, DeleteView, UpdateView  # noqa
 
 from django.contrib.auth.models import User
 
@@ -41,21 +41,25 @@ def create_booking(request):
     )
 
 
-
 def my_bookings(request):
     user_profile = request.user
-    approved_bookings = Booking.objects.filter(email_address = request.user, confirmed=True)
-    pending_bookings = Booking.objects.filter(email_address = request.user, confirmed=False)
-    
+    approved_bookings = Booking.objects.filter(
+        email_address=request.user,
+        confirmed=True
+    )
+    pending_bookings = Booking.objects.filter(
+        email_address=request.user,
+        confirmed=False
+    )
+
     return render(
-        request, 
+        request,
         'bookings/my_bookings.html',
         {
             'approved_bookings': approved_bookings,
             'pending_bookings': pending_bookings,
         }
     )
-
 
 
 @login_required
@@ -74,7 +78,11 @@ def update_booking(request, booking_id):
 
     # user owns the booking - okay to proceed
     if request.method == "POST":
-        form = BookingForm(request.POST or None, request.FILES, instance=booking)
+        form = BookingForm(
+            request.POST or None,
+            request.FILES,
+            instance=booking
+        )
         if form.is_valid():
             booking = form.save(commit=False)
             booking.confirmed = False
@@ -112,6 +120,3 @@ def delete_booking(request, booking_id):
     booking.delete()
     messages.success(request, "Booking deleted")
     return redirect("my_bookings")
- 
-
-

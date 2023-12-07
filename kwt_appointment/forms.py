@@ -4,6 +4,7 @@ from .models import Booking
 
 from cloudinary.forms import CloudinaryFileField
 
+
 class BookingForm(forms.ModelForm):
 
     class Meta:
@@ -31,14 +32,20 @@ class BookingForm(forms.ModelForm):
         }
 
         widgets = {
-        'preferred_day': forms.Select(attrs={'class': 'form-select',}),
-        'preferred_time': forms.Select(attrs={'class': 'form-select',}),
-        'cover_up': forms.Select(attrs={'class': 'form-select',}),
-        'color_or': forms.Select(attrs={'class': 'form-select',}),
-        'tattoo_location': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Upper left arm'}),
-        'tattoo_description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Style, size, inspiration...'}),
-        'terms': forms.RadioSelect(attrs={'class': 'form-check-input'})
-    }
+            'preferred_day': forms.Select(attrs={'class': 'form-select', }),
+            'preferred_time': forms.Select(attrs={'class': 'form-select', }),
+            'cover_up': forms.Select(attrs={'class': 'form-select', }),
+            'color_or': forms.Select(attrs={'class': 'form-select', }),
+            'tattoo_location': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Upper left arm'
+            }),
+            'tattoo_description': forms.Textarea(attrs={
+                'class': 'form-control',
+                'placeholder': 'Style, size, inspiration...'
+            }),
+            'terms': forms.RadioSelect(attrs={'class': 'form-check-input'})
+        }
 
     field_order = [
         'preferred_day',
@@ -48,8 +55,5 @@ class BookingForm(forms.ModelForm):
         'tattoo_location',
         'tattoo_description',
         'reference_images',
-        'terms',    
+        'terms',
     ]
-
-    
-

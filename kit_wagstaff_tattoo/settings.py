@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", False)      
+DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = [".gitpod.io", ".herokuapp.com"]
 
@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'cloudinary',
 
-    #Apps
+    # Apps
     'kwt_home',
     'kwt_about',
     'kwt_appointment',
@@ -139,16 +139,16 @@ CSRF_TRUSTED_ORIGINS = [
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa
     },
 ]
 
@@ -166,8 +166,8 @@ USE_I18N = True
 USE_TZ = True
 
 MESSAGE_TAGS = {
-messages.SUCCESS: 'alert-success',
-messages.ERROR: 'alert.danger',
+    messages.SUCCESS: 'alert-success',
+    messages.ERROR: 'alert.danger',
 }
 
 # Account setup
