@@ -31,8 +31,8 @@ class BookingForm(forms.ModelForm):
         }
 
         widgets = {
-        'preferred_day': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Your preferred day'}),
-        'preferred_time': forms.Select(attrs={'class': 'form-select', 'placeholder': 'Your preferred time'}),
+        'preferred_day': forms.Select(attrs={'class': 'form-select',}),
+        'preferred_time': forms.Select(attrs={'class': 'form-select',}),
         'cover_up': forms.Select(attrs={'class': 'form-select',}),
         'color_or': forms.Select(attrs={'class': 'form-select',}),
         'tattoo_location': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Upper left arm'}),

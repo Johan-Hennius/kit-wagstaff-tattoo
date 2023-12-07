@@ -91,11 +91,11 @@
                         class="booking-button__wrapper d-flex flex-column justify-content-center align-items-center gap-3">
                         <a href="{% url 'update_booking' booking.id %}" class="btn__rectangle text-center">Edit</a>
                         <button class="btn__rectangle btn__rectangle--delete" data-bs-toggle="modal"
-                            data-bs-target="#deleteModal-{{ booking.id }}">Delete</button>
+                            data-bs-target="#deleteModal-p-{{ booking.id }}">Delete</button>
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="deleteModal-{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel"
+            <div class="modal fade" id="deleteModal-p-{{ booking.id }}" tabindex="-1" aria-labelledby="deleteModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
