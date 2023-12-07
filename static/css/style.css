@@ -269,6 +269,7 @@ ul {
     font-family: var(--ff-primary);
     font-size: var(--fs-subtitle);
     color: var(--clr-black);
+    padding-top: 2rem;
 }
 
 .login__text {
@@ -627,6 +628,7 @@ ul {
     /*----------------------------------------------------------- Register/login/logout */
     .registration__title {
         margin: 2rem 0;
+        padding-top: 0;
     }
 
     /*----------------------------------------------------------- Hero Section */
