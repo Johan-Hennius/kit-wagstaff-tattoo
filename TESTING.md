@@ -6,32 +6,22 @@ Return back to the [README.md](README.md) file.
 
 ### HTML
 
+![Alt text](image.png)
+
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- If you are copying/pasting your HTML code, use this link: https://validator.w3.org/#validate_by_input
-- (*recommended*) If you are using the live deployed site pages, use this link: https://validator.w3.org/#validate_by_uri
-
-It's recommended to validate the live pages (each of them) using the deployed URL.
-This will give you a custom URL as well, which you can use on your testing documentation.
-It makes it easier to return back to a page to validate it again in the future.
-The URL will look something like this:
-
-- https://validator.w3.org/nu/?doc=https%3A%2F%2FJohan-Hennius.github.io%2Fkit-wagstaff-tattoo%2Findex.html
-
-Sample HTML code validation documentation (tables are extremely helpful!):
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FJohan-Hennius.github.io%2Fkit-wagstaff-tattoo%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FJohan-Hennius.github.io%2Fkit-wagstaff-tattoo%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FJohan-Hennius.github.io%2Fkit-wagstaff-tattoo%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining HTML files |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2F) | ![screenshot](documentation/html-validation/home-w3c.png) | 3 sections lack header h2-h6 warning |
+| About | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Fabout%2F) | ![screenshot](documentation/html-validation/about-w3c.png) | 3 sections lack header h2-h6 warning |
+| Portfolio | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Fbrowse%2F) | ![screenshot](documentation/html-validation/portfolio-w3c.png) | 3 sections lack header h2-h6 warning |
+| Book | n/a | ![screenshot](documentation/html-validation/book-w3c.png) | 2 sections lack header h2-h6 warning & action empty on form - left empty to avoid breaking Django setup |
+| My Bookings | n/a | ![screenshot](documentation/html-validation/my-bookings-w3c.png) | 2 sections lack header h2-h6 warning & duplicate ID - fixed |
+| Tattoo Care | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Fmisc%2Ftattoo-care%2F) | ![screenshot](documentation/html-validation/tattoo-care-w3c.png) | 1 section lack header h2-h6 warning & a few other errors - checked HTML file - could not find errors |
+| Terms | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Fmisc%2Fterms%2F) | ![screenshot](documentation/html-validation/terms-w3c.png) | 2 sections lack header h2-h6 warning |
+| Logout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Faccounts%2Flogout%2F) | ![screenshot](documentation/html-validation/logout-w3c.png) | 3 sections lack header h2-h6 warning |
+| Register | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/html-validation/register.w3c.png) | 1 section lacks header h2-h6 warning |
+| Login | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjbh19-kwt-website-6d772e1d0754.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/html-validation/login-w3c.png) | 1 section lacks header h2-h6 warning |
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
