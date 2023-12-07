@@ -167,6 +167,14 @@ Python was manually tested with the below user acceptance testing:
 
 During the development process, i did not take screenshots of the bugs that arose. I decided to fix the bugs as and when they arrived to avoid exiting the flow state.
 
+- General: Images not loading.
+
+    - To fix this, I checked all of my image paths.
+
+- Python: Form submit. Form would not accept email input.
+
+    - To fix this, I removed this email input from the form and autofilled it with the user's info in the view.
+
 - Python: Form update. Form would not pre-populate.
 
     - To fix this, I created the form variable using instance=booking which referenced the booking by it's ID.
@@ -222,8 +230,7 @@ During the development process, i did not take screenshots of the bugs that aros
 
     - To fix this, i added padding to the top of each heading element.
 
-- CSS: Overflow-X in book button div. The right hand side of the book button div had overflow because i set the width to 102
-% in order to close up a gap.
+- CSS: Overflow-X in book button div. The right hand side of the book button div had overflow because i set the width to 102% in order to close up a gap.
 
     - To fix this, i removed the width settings on the book buttons' divs and their parent divs.
 
