@@ -257,7 +257,7 @@ ul {
 .form-label,
 .form-check-label {
     color: var(--clr-black);
-    font-family: var(--clr-black);
+    font-family: var(--ff-text);
 }
 
 /*--------------------------------------------------------------------------------- Registration / login / logout */
