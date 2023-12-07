@@ -160,52 +160,24 @@ Defensive programming was manually tested with the below user acceptance testing
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | Home | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature01.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature02.png) |
-| About | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature04.png) |
-| Gallery | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature05.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature06.png) |
-| Contact | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
-| repeat for all remaining pages | x | x | x | x | x |
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Another way of performing defensive testing is a simple Pass/Fail for each test.
-The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases.
-
-When in doubt, use the above method instead, and delete the table below.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| | Navbar is expected to not show "my bookings" if user is not logged in/registered | Tested the feature by loading main page and brute forcing the my-bookings url | The feature behaved as expected, and it did not let the guest through | Test concluded and passed | ![screenshot](documentation/defensive/defensive-1.png) ![screenshot](documentation/defensive/defensive-2.png) |
+| | Book button will take guest to registration and logged in user to book page | Tested the feature by doing clicking in both logged in and logged out status | The feature did not respond to A, B, or C. | Test concluded and passed | ![screenshot](documentation/defensive/defensive-3.png) ![screenshot](documentation/defensive/defensive-4.png) |
+| Update Booking | | | | | |
+| | The update/edit booking feature should allow user to only edit their own booking | Tested the feature by adding pk to url - brute force | The feature behaved as expected and blocked the user | Test concluded and passed | ![screenshot](documentation/defensive/defensive-5.png) |
+| | Booking form is expected to flag empty fields before submitting | Tested the feature by leaving fields empty and submitting | Test concluded and passed | ![screenshot](documentation/defensive/defensive-6.png) |
 
 ## User Story Testing
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a customer i want to easily book a tattoo appoinment so that i can avoid convoluted booking processes. | ![screenshot](documentation/user-tests/user-1.png) ![screenshot](documentation/user-tests/user-2.png) |
+| As a customer i want to have the ability to update an appointment so that i can request changes if they are needed. | ![screenshot](documentation/user-tests/user-3.png) ![screenshot](documentation/user-tests/user-4.png) |
+| As a customer i want to ensure that only i can access my appointments so that unknown users cannot edit my appointments or see personal info. | ![screenshot](documentation/defensive/defensive-5.png) |
+| As a customer i want to get to know the artist so that i feel comfortable. | ![screenshot](documentation/user-tests/user-5.png) |
+| As a site owner i want to get as much information as possible in the booking process so that the design process is straight forward. | ![screenshot](documentation/user-tests/user-2.png) |
+| As a site owner i want to easily access my upcoming appointments so that i can manage my business effectively. | ![screenshot](documentation/user-tests/user-6.png) |
+| As a site owner i want to give my clients clear instructions for tattoo after care so that they can avoid risk of infection. | ![screenshot](documentation/user-tests/user-7.png) |
+| As a site owner i want to have a clean and intuitive site so that my customer's journey is effortless and encourages repeat visits. | ![screenshot](documentation/user-tests/user-8.png) |
 
 ## Automated Testing
 
