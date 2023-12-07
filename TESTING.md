@@ -102,66 +102,13 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Defensive programming (defensive design) is extremely important!
-
-When building projects that accept user inputs or forms, you should always test the level of security for each.
-Examples of this could include (not limited to):
-
-Forms:
-- Users cannot submit an empty form
-- Users must enter valid email addresses
-
-PP3 (Python-only):
-- Users must enter a valid letter/word/string when prompted
-- Users must choose from a specific list only
-
-MS3 (Flask) | MS4/PP4/PP5 (Django):
-- Users cannot brute-force a URL to navigate to a restricted page
-- Users cannot perform CRUD functionality while logged-out
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers
-
-You'll want to test all functionality on your application, whether it's a standard form,
-or uses CRUD functionality for data manipulation on a database.
-Make sure to include the `required` attribute on any form-fields that should be mandatory.
-Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
-
-You should include any manual tests performed, and the expected results/outcome.
-
-Testing should be replicable.
-Ideally, tests cases should focus on each individual section of every page on the website.
-Each test case should be specific, objective, and step-wise replicable.
-
-Instead of adding a general overview saying that everything works fine,
-consider documenting tests on each element of the page
-(ie. button clicks, input box validation, navigation links, etc.) by testing them in their happy flow,
-and also the bad/exception flow, mentioning the expected and observed results,
-and drawing a parallel between them where applicable.
-
-Consider using the following format for manual test cases:
-
-Expected Outcome / Test Performed / Result Received / Fixes Implemented
-
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
-
-Use the table below as a basic start, and expand on it using the logic above.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | Home | | | | | |
 | | Navbar is expected to not show "my bookings" if user is not logged in/registered | Tested the feature by loading main page and brute forcing the my-bookings url | The feature behaved as expected, and it did not let the guest through | Test concluded and passed | ![screenshot](documentation/defensive/defensive-1.png) ![screenshot](documentation/defensive/defensive-2.png) |
-| | Book button will take guest to registration and logged in user to book page | Tested the feature by doing clicking in both logged in and logged out status | The feature did not respond to A, B, or C. | Test concluded and passed | ![screenshot](documentation/defensive/defensive-3.png) ![screenshot](documentation/defensive/defensive-4.png) |
+| | Book button will take guest to registration and logged in user to book page | Tested the feature by doing clicking in both logged in and logged out status | Test concluded and passed | ![screenshot](documentation/defensive/defensive-3.png) ![screenshot](documentation/defensive/defensive-4.png) |
 | Update Booking | | | | | |
 | | The update/edit booking feature should allow user to only edit their own booking | Tested the feature by adding pk to url - brute force | The feature behaved as expected and blocked the user | Test concluded and passed | ![screenshot](documentation/defensive/defensive-5.png) |
 | | Booking form is expected to flag empty fields before submitting | Tested the feature by leaving fields empty and submitting | Test concluded and passed | ![screenshot](documentation/defensive/defensive-6.png) |
@@ -179,284 +126,114 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a site owner i want to give my clients clear instructions for tattoo after care so that they can avoid risk of infection. | ![screenshot](documentation/user-tests/user-7.png) |
 | As a site owner i want to have a clean and intuitive site so that my customer's journey is effortless and encourages repeat visits. | ![screenshot](documentation/user-tests/user-8.png) |
 
-## Automated Testing
+## Javascript testing
 
-I have conducted a series of automated tests on my application.
+JavaScript was manually tested with the below user acceptance testing:
 
-I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive.
+| Page | Expectation | Test | Result | Fix | Screenshot |
+| --- | --- | --- | --- | --- | --- |
+| Home | | | | | |
+| | Elements are expected to reveal on scroll - same across all pages | Tested the feature by loading pages and scrolling down | The JS behaved as expected | Test concluded and passed | ![screenshot](documentation/js/js-1.png) |
 
-### JavaScript (Jest Testing)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Adjust the code below (file names, etc.) to match your own project files/folders.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I have used the [Jest](https://jestjs.io) JavaScript testing framework to test the application functionality.
-
-In order to work with Jest, I first had to initialize NPM.
-
-- `npm init`
-- Hit `enter` for all options, except for **test command:**, just type `jest`.
-
-Add Jest to a list called **Dev Dependencies** in a dev environment:
-
-- `npm install --save-dev jest`
-
-**IMPORTANT**: Initial configurations
-
-When creating test files, the name of the file needs to be `file-name.test.js` in order for Jest to properly work.
-
-Without the following, Jest won't properly run the tests:
-
-- `npm install -D jest-environment-jsdom`
-
-Due to a change in Jest's default configuration, you'll need to add the following code to the top of the `.test.js` file:
-
-```js
-/**
- * @jest-environment jsdom
- */
-
-const { test, expect } = require("@jest/globals");
-const { function1, function2, function3, etc. } = require("../script-name");
-
-beforeAll(() => {
-    let fs = require("fs");
-    let fileContents = fs.readFileSync("index.html", "utf-8");
-    document.open();
-    document.write(fileContents);
-    document.close();
+``` JavaScript
+/* jshint esversion: 11 */
+// On scroll reveal animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
 });
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
 ```
 
-Remember to adjust the `fs.readFileSync()` to the specific file you'd like you test.
-The example above is testing the `index.html` file.
+## Python Testing
 
-Finally, at the bottom of the script file where your primary scripts are written, include the following at the bottom of the file.
-Make sure to include the name of all of your functions that are being tested in the `.test.js` file.
+Python was manually tested with the below user acceptance testing:
 
-```js
-if (typeof module !== "undefined") module.exports = {
-    function1, function2, function3, etc.
-};
-```
-
-Now that these steps have been undertaken, further tests can be written, and be expected to fail initially.
-Write JS code that can get the tests to pass as part of the Red-Green refactor process.
-
-Once ready, to run the tests, use this command:
-
-- `npm test`
-
-**NOTE**: To obtain a coverage report, use the following command:
-
-- `npm test --coverage`
-
-Below are the results from the tests that I've written for this application:
-
-| Test Suites | Tests | Screenshot |
-| --- | --- | --- |
-| 1 passed | 16 passed | ![screenshot](documentation/js-test-coverage.png) |
-| x | x | repeat for all remaining tests |
-
-#### Jest Test Issues
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this section to list any known issues you ran into while writing your Jest tests.
-Remember to include screenshots (where possible), and a solution to the issue (if known).
-
-This can be used for both "fixed" and "unresolved" issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-### Python (Unit Testing)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Adjust the code below (file names, etc.) to match your own project files/folders.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I have used Django's built-in unit testing framework to test the application functionality.
-
-In order to run the tests, I ran the following command in the terminal each time:
-
-`python3 manage.py test name-of-app `
-
-To create the coverage report, I would then run the following commands:
-
-`coverage run --source=name-of-app manage.py test`
-
-`coverage report`
-
-To see the HTML version of the reports, and find out whether some pieces of code were missing, I ran the following commands:
-
-`coverage html`
-
-`python3 -m http.server`
-
-Below are the results from the various apps on my application that I've tested:
-
-| App | File | Coverage | Screenshot |
-| --- | --- | --- | --- |
-| Bag | test_forms.py | 99% | ![screenshot](documentation/py-test-bag-forms.png) |
-| Bag | test_models.py | 89% | ![screenshot](documentation/py-test-bag-models.png) |
-| Bag | test_urls.py | 100% | ![screenshot](documentation/py-test-bag-urls.png) |
-| Bag | test_views.py | 71% | ![screenshot](documentation/py-test-bag-views.png) |
-| Checkout | test_forms.py | 99% | ![screenshot](documentation/py-test-checkout-forms.png) |
-| Checkout | test_models.py | 89% | ![screenshot](documentation/py-test-checkout-models.png) |
-| Checkout | test_urls.py | 100% | ![screenshot](documentation/py-test-checkout-urls.png) |
-| Checkout | test_views.py | 71% | ![screenshot](documentation/py-test-checkout-views.png) |
-| Home | test_forms.py | 99% | ![screenshot](documentation/py-test-home-forms.png) |
-| Home | test_models.py | 89% | ![screenshot](documentation/py-test-home-models.png) |
-| Home | test_urls.py | 100% | ![screenshot](documentation/py-test-home-urls.png) |
-| Home | test_views.py | 71% | ![screenshot](documentation/py-test-home-views.png) |
-| Products | test_forms.py | 99% | ![screenshot](documentation/py-test-products-forms.png) |
-| Products | test_models.py | 89% | ![screenshot](documentation/py-test-products-models.png) |
-| Products | test_urls.py | 100% | ![screenshot](documentation/py-test-products-urls.png) |
-| Products | test_views.py | 71% | ![screenshot](documentation/py-test-products-views.png) |
-| Profiles | test_forms.py | 99% | ![screenshot](documentation/py-test-profiles-forms.png) |
-| Profiles | test_models.py | 89% | ![screenshot](documentation/py-test-profiles-models.png) |
-| Profiles | test_urls.py | 100% | ![screenshot](documentation/py-test-profiles-urls.png) |
-| Profiles | test_views.py | 71% | ![screenshot](documentation/py-test-profiles-views.png) |
-| x | x | x | repeat for all remaining tested apps/files |
-
-#### Unit Test Issues
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this section to list any known issues you ran into while writing your unit tests.
-Remember to include screenshots (where possible), and a solution to the issue (if known).
-
-This can be used for both "fixed" and "unresolved" issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Page | Expectation | Test | Result | Fix | Screenshot |
+| --- | --- | --- | --- | --- | --- |
+| Book | | | | | |
+| | Registered users should be able to book appointment | Tested the functionality by creating a booking while signed in | The functionality behaved as expected | Test concluded and passed | ![screenshot](documentation/python/python-1.png) |
+| | Registered users should be able to edit their bookings | Tested the functionality by editing booking | The functionality behaved as expected | Test concluded and passed | ![screenshot](documentation/python/python-2.png) |
+| | Registered users should be able to delete their bookings | Tested the functionality by deleting booking | The functionality behaved as expected | Test concluded and passed | ![screenshot](documentation/python/python-3.png) |
+| Portfolio | | | | | |
+| | The portfolio should loop through the portfolio database and display uploaded images | Tested the feature by loading portfolio | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/python/python-4.png) |
 
 ## Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+During the development process, i did not take screenshots of the bugs that arose. I decided to fix the bugs as and when they arrived to avoid exiting the flow state.
 
-This section is primarily used for JavaScript and Python applications,
-but feel free to use this section to document any HTML/CSS bugs you might run into.
+- Python: Form update. Form would not pre-populate.
 
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
+    - To fix this, I created the form variable using instance=booking which referenced the booking by it's ID.
 
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
+- Python: Form update. Block brute force correctly. Form would not load.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+    - To fix this, I created the booking instance using get_object_404(Booking, id=booking_id). 
+    And used the following if statement:
+    ``` Python 
+    if booking.email_address != request.user:
+    ```
 
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
+- HTML & Python: Delete Modal. Delete button would not call on delete modal.
 
-    ![screenshot](documentation/bug01.png)
+    - To fix this, the booking ID needed to be placed in the modal's id and the modal itself needed to be within the for loop.
 
-    - To fix this, I _____________________.
+- HTML & Python: Portfolio/Gallery. Images not being displayed.
 
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
+    - To fix this, i ensured that i used the correct words in the dot notation function = {{ image.gallery_image.url }}
 
-    ![screenshot](documentation/bug02.png)
+- HTML & Python: Booking Form - Terms & Conditions Checkbox. The checkbox did not line-up with the label. Label could not contain an anchor tag
 
-    - To fix this, I _____________________.
+    - To fix this, i stated in the view that the booking.terms = True when saved. On the template page i put a separate required terms & conditions form-check which the user had to check to submit.
+    ``` Python view 
+    if request.method == "POST":
+        form = BookingForm(
+            request.POST or None,
+            request.FILES,
+            instance=booking
+        )
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.confirmed = False
+            booking.terms = True
+            form.save()
+            messages.success(request, "Booking updated and awaiting approval")
+            return redirect(reverse("my_bookings"))
+        messages.error(request, "An error occured, please try again!")
+    else:
+        form = BookingForm(instance=booking)
+    ```
 
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
+    ``` HTML form
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+        <label class="form-check-label" for="termsCheck">
+            I have read and agreed to the <a href="{% url 'terms' %}">Terms and Conditions</a>
+        </label>
+    </div>
+    ```
 
-    ![screenshot](documentation/bug03.png)
+- CSS: H1 being cut off on mobile devices. The heading element on every page was cut off, showing only half of the heading.
 
-    - To fix this, I _____________________.
+    - To fix this, i added padding to the top of each heading element.
 
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
+- CSS: Overflow-X in book button div. The right hand side of the book button div had overflow because i set the width to 102
+% in order to close up a gap.
 
-    ![screenshot](documentation/bug04.png)
+    - To fix this, i removed the width settings on the book buttons' divs and their parent divs.
 
-    - To fix this, I _____________________.
-
-- Python `E501 line too long` (93 > 79 characters)
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
-
-### GitHub **Issues**
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
-To access your Issues, click on the "Issues" tab at the top of your repository.
-Alternatively, use this link: https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues
-
-If using the Issues tracker for your bug management, you can simplify the documentation process.
-Issues allow you to directly paste screenshots into the issue without having to first save the screenshot locally,
-then uploading into your project.
-
-You can add labels to your issues (`bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s).
-
-Once you've sorted the issue, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following format:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-**Fixed Bugs**
-
-All previously closed/fixed bugs can be tracked [here](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues?q=is%3Aissue+is%3Aclosed).
-
-| Bug | Status |
-| --- | --- |
-| [JS Uncaught ReferenceError: `foobar` is undefined/not defined](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues/1) | Closed |
-| [Python `'ModuleNotFoundError'` when trying to import module from imported package](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues/2) | Closed |
-| [Django `TemplateDoesNotExist` at /appname/path appname/template_name.html](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues/3) | Closed |
 
 **Open Issues**
 
 Any remaining open issues can be tracked [here](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues).
 
-| Bug | Status |
-| --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues/4) | Open |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/Johan-Hennius/kit-wagstaff-tattoo/issues/5) | Open |
-
 ## Unfixed Bugs
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-Some examples:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.png)
-
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.png)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
-
-    ![screenshot](documentation/unfixed-bug03.png)
-
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 There are no remaining bugs that I am aware of.
