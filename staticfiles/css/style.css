@@ -456,6 +456,10 @@ ul {
 }
 
 /*--------------------------------------------------------------------------------- My Bookings */
+.book__title {
+    padding-top: 2rem;
+}
+
 /*----------------------------------------------------------- Hero section */
 .hero-section--my-bookings {
     background-color: var(--clr-l-grey);
@@ -644,6 +648,10 @@ ul {
     }
 
     /*------------------------------------------------------------My Bookings */
+    .book__title {
+        padding-top: 0;
+    }
+    
     .hero-section--my-bookings {
         background-color: var(--clr-l-grey);
         padding-bottom: 7%;
