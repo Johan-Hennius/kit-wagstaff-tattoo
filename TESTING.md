@@ -234,6 +234,10 @@ During the development process, i did not take screenshots of the bugs that aros
 
     - To fix this, i removed the width settings on the book buttons' divs and their parent divs.
 
+- CSS: Padding on pending and approved titles in my-bookings. The top and bottom of these two title were being cut off on mobile devices.
+
+    - To fix this, i increased the padding on the approved title and removed the padding from the pending title parent div.
+
 
 **Open Issues**
 
