@@ -73,7 +73,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 I've tested my deployed project on multiple browsers to check for compatibility issues.  
 All dimensions set at 1600 x 992.
 
-| Browser | Home | About | Contact | etc | Notes |
+| Browser | Home | Portfolio | Book | My Bookings | Notes |
 | --- | --- | --- | --- | --- | --- |
 | Chrome | ![Home](documentation/browsers/chrome-home.png) | ![Portfolio](documentation/browsers/chrome-portfolio.png) | ![Book](documentation/browsers/chrome-book.png) | ![My Bookings](documentation/browsers/chrome-my-bookings.png) | Works as expected |
 | Firefox | ![Home](documentation/browsers/firefox-home.png) | ![Portfolio](documentation/browsers/firefox-portfolio.png) | ![Book](documentation/browsers/firefox-book.png) | ![My Bookings](documentation/browsers/firefox-my-bookings.png) | Works as expected |
@@ -81,58 +81,16 @@ All dimensions set at 1600 x 992.
 
 ## Responsiveness
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site on various device sizes.
-
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
-
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-Sample responsiveness testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-| Device | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile-home.png) | ![screenshot](documentation/responsive-mobile-about.png) | ![screenshot](documentation/responsive-mobile-contact.png) | ![screenshot](documentation/responsive-mobile-etc.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-home.png) | ![screenshot](documentation/responsive-tablet-about.png) | ![screenshot](documentation/responsive-tablet-contact.png) | ![screenshot](documentation/responsive-tablet-etc.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop-home.png) | ![screenshot](documentation/responsive-desktop-about.png) | ![screenshot](documentation/responsive-desktop-contact.png) | ![screenshot](documentation/responsive-desktop-etc.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl-home.png) | ![screenshot](documentation/responsive-xl-about.png) | ![screenshot](documentation/responsive-xl-contact.png) | ![screenshot](documentation/responsive-xl-etc.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k-home.png) | ![screenshot](documentation/responsive-4k-about.png) | ![screenshot](documentation/responsive-4k-contact.png) | ![screenshot](documentation/responsive-4k-etc.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel-home.png) | ![screenshot](documentation/responsive-pixel-about.png) | ![screenshot](documentation/responsive-pixel-contact.png) | ![screenshot](documentation/responsive-pixel-etc.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone-home.png) | ![screenshot](documentation/responsive-iphone-about.png) | ![screenshot](documentation/responsive-iphone-contact.png) | ![screenshot](documentation/responsive-iphone-etc.png) | Works as expected |
-| repeat for any other tested browsers | x | x | x | x | x |
+| Device | Home | About | Portfolio | Notes |
+| --- | --- | --- | --- | --- |
+| iPhone 11 (DevTools) | ![Home](documentation/responsiveness/iphone-home.png) | ![About](documentation/responsiveness/iphone-about.png) | ![portfolio](documentation/responsiveness/iphone-portfolio.png) | Works as expected |
+| Tablet (DevTools) | ![Home](documentation/responsiveness/ipad-home.png) | ![About](documentation/responsiveness/ipad-about.png) | ![Portfolio](documentation/responsiveness/ipad-portfolio.png) | Works as expected |
+| Desktop | ![Home](documentation/responsiveness/desktop-home.png) | ![About](documentation/responsiveness/desktop-about.png) | ![Portfolio](documentation/responsiveness/desktop-portfolio.png) | Works as expected |
+| XL Monitor | ![Home](documentation/responsiveness/xl-home.png) | ![About](documentation/responsiveness/xl-about.png) | ![Portfolio](documentation/responsiveness/xl-portfolio.png) | Works as expected |
 
 ## Lighthouse Audit
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
