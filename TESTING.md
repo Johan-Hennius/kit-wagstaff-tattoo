@@ -109,7 +109,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Book button will take guest to registration and logged in user to book page | Tested the feature by doing clicking in both logged in and logged out status | The feature behaved as expected, and it did not let the guest through | Test concluded and passed | ![screenshot](documentation/defensive/defensive-3.png) ![screenshot](documentation/defensive/defensive-4.png) |
 | Update Booking | | | | | |
 | | The update/edit booking feature should allow user to only edit their own booking | Tested the feature by adding pk to url - brute force | The feature behaved as expected and blocked the user | Test concluded and passed | ![screenshot](documentation/defensive/defensive-5.png) |
-| | Booking form is expected to flag empty fields before submitting | Tested the feature by leaving fields empty and submitting | The feature behaved as expected, and it did not let the guest through | Test concluded and passed | ![screenshot](documentation/defensive/defensive-6.png) |
+| | Booking form is expected to flag empty fields before submitting | Tested the feature by leaving fields empty and submitting | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/defensive/defensive-6.png) |
 
 ## User Story Testing
 
