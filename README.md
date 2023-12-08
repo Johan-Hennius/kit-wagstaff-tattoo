@@ -212,7 +212,7 @@ Tattoo Care
 
 - **Login and Register**
 
-    - These two pages allow the user to either register or login in order access the booking and my bookins features.
+    - These two pages allow the user to either register or login in order access the booking and my bookings features.
 
 ![desktop-register](documentation/feature-images/register.png)
 ![desktop-login](documentation/feature-images/login.png)
